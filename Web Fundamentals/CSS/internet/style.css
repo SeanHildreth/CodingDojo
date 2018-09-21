@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 1px solid blue;
+    font-size: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 1000px;
+    height: 1000px;
+    margin: 0px auto;
+}
+
+.header{
+    height: 125px;
+    width: 1000px;
+}
+
+.logoGroup{
+    height: 100px;
+    width: 300px;
+}
+
+.logoGroup img{
+    height: 90px;
+}
+
+.logoGroup h1{
+    font-size: 45px;
+    font-weight: 100;
+}
+
+.logoGroup h1 span{
+    color: blue;
+}
+
+.headBar{
+    height: 50px;
+    width: 1000px;
+    background-image: linear-gradient(blue, white, blue);
+}
+.headBar h2{
+    font-size: 25px;
+    color: white;
+}
