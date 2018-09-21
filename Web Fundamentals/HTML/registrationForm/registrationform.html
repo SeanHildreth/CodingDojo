@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Registration Form</title>
+    </head>
+    <body>
+        <form action="database.php" method="post">
+            <h1>My Registration Form</h1>
+            <label>
+                First Name:<input type="text" name="firstname">
+            </label>
+            <br>
+            <br>
+            <label>
+                Last Name:<input type="text" name="lastname">
+            </label>
+            <br>
+            <br>
+            <label>
+                Email<input type="text" name="email">
+            </label>
+            <br>
+            <br>
+            <label>
+                Password<input type="password" name="password">
+            </label>
+            <br>
+            <br>
+            <label>
+                PW Confirm<input type="password" name="pwconfirm">
+            </label>
+            <br>
+            <br>
+            <label>
+                Birthday<input type="date" name="birthday">
+            </label>
+            <br>
+            <br>
+            <label>
+                <input type="radio" name="male">Male
+            </label>
+            <label>
+                <input type="radio" name="female">Female
+            </label>
+            <label>
+                <input type="radio" name="other">Other
+            </label>
+            <br>
+            <p>A short description about yourself:</p>
+            <textarea name="description"></textarea>
+            <br>
+            <br>
+            <label>Favorite Language
+                <select name="favoritelanguage">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="c#">C#</option>
+                    <option value="ruby">Ruby</option>
+                    <option value="c++">C++</option>
+                    <option value="php">PHP</option>
+                </select>
+            </label>
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>

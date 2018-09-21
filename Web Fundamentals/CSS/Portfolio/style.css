@@ -1,0 +1,132 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 1px dotted blue;
+    
+}
+a{
+    color: black;
+}
+#container{
+    width: 970px;
+    height: 1030px;
+    margin: 0px auto;
+}
+#header{
+    width: 970px;
+    height: 64px;
+    background-color: #E9E9E9;
+}
+#header h1{
+    display: inline-block;
+    margin: 21px 0px 0px 25px;
+}
+#header h2{
+    /* display: inline-block; */
+    margin: 24px 44px 0px 0px;
+    float: right;
+}
+#main{
+    background-color: #373134;
+    height: 851px;
+    width: 945px;
+    padding: 20px 0px 25px 25px;
+}
+#maintop{
+    height: 306;
+    width: 970;
+}
+#mypic{
+    width: 400px;
+    height: 263px;
+    border: 5px solid rgb(192, 192, 192);
+    margin: 0px 22px 22px 0px;
+}
+#about{
+    display: inline-block;
+    height: 273px;
+    width: 484px;
+    vertical-align: top;
+    margin: 0px 0px 22px 0px;
+}
+#about h2{
+    height: 42px;
+    background-color: #abb0b6;
+}
+.about{
+    background-color: #c4b7ba;
+    font-size: 12pt;
+}
+#about div p{
+    
+}
+#about div a{
+
+}
+#mainbottom{
+    height: 593;
+    width: 970;
+}
+.project{
+    height: 452px;
+    width: 290px;
+    display: inline-block;
+    margin: 0px 22px 0px 0px;
+    vertical-align: top;
+}
+.project h2{
+    height: 42px;
+    width: 290px;
+    background-color: #abb0b6;
+}
+.project img{
+    width: 290px;
+    height: 150px;
+}
+.project p{
+    height: 160px;
+    width: 290px;
+    background-color: #c4b7ba;
+}
+.project h3{
+    height: 38px;
+    width: 290px;
+    background-color: #abb0b6;
+}
+.techimgs{
+    height: 162px;
+    width: 290px;
+    background-color: #c4b7ba;
+}
+.techimgs img{
+    height: 40px;
+    width: 40px;
+}
+.techimgs a{
+    height: 15px;
+    width: 100 px;
+}
+#footer{
+    height: 70px;
+    width: 970px;
+    background-color: #E9E9E9;
+}
+#footer p{
+    width: 970px;
+    height: 35px;
+    text-align: center;
+}
+#footerbottom{
+    height: 35px;
+    width: 332px;
+    margin: 0px 0px 0px 319px;
+}
+#footerbottom a{
+    vertical-align: middle;
+}
+#footerbottom img{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0px 2px 0px 0px;
+}
