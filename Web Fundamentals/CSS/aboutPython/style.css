@@ -1,0 +1,222 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted blue; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+#container{
+    height: 806px;
+    width: 970px;
+    margin: 0px auto;
+}
+#maintop {
+    height: 480px;
+    background-color: #265175;
+    border-bottom: 2px solid #193751;
+}
+#topheader{
+    height: 125px;
+}
+#headerlogo{
+    height: 125px;
+    width: 484px;
+    display: inline-block;
+}
+#headerlogo img{
+    height: 100px;
+    margin: 15px 0px 0px 28px;
+}
+#sideheader{
+    height: 125px;
+    width: 480px;
+    display: inline-block;
+    vertical-align: top;
+}
+#shtop{
+    text-align: right;
+    height: 29px;
+}
+#shtop p{
+    padding: 10px 40px 0px 0px;
+    color: white;
+}
+#shtop p span{
+    color: black;
+}
+#shtop a{
+    color: #EDC000;
+}
+#shbottom{
+    height: 61px;
+}
+#searchbar{
+    width: 278px;
+    height: 61px;
+    float: right;
+    margin: 0px 13px 0px 0px;
+    background-color: #444444;
+    border: 0px solid;
+    border-radius: 8px;
+    box-shadow: black 3px 3px 4px;
+}
+#searchbar input{
+    height: 30px;
+    width: 160px;
+    margin: 13px 0px 13px 41px;
+    box-shadow: 1px 1px inset white;
+    text-align: center;
+}
+#searchbutton{
+    display: inline-block;
+    margin: 0px 0px 0px 6px;
+    height: 29px;
+    width: 38px;
+
+}
+#searchbutton button{
+    height: 29px;
+    width: 38px;
+    color: white;
+    background-color: #265175;
+    border: 2px solid #CDC9C6;
+    border-bottom-color: #6c6c6c;
+    border-right-color: #6c6c6c;
+    border-radius: 5px;
+    box-shadow: black 3px 3px 4px;
+}
+#mtbottom{
+    height: 355px;
+    text-align: center;
+}
+#navbar{
+    height: 50px;
+}
+#navbarbox{
+    width: 851px;
+    height: 46px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #427cad;
+    border-radius: 8px;
+    box-shadow: black 3px 3px 4px;
+}
+#navbarbox a{
+    color: white;
+    text-decoration: none;
+    margin: 0px 17px;
+    font-size: 20px;
+    line-height: 46px;
+}
+#mtb-content{
+    height: 305px;
+}
+#linkarea{
+    width: 225px;
+    height: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25px;
+}
+#linkarea ul{
+    list-style-image: url(images/arrows.png);
+    list-style-position: inside;
+    list-style-type: circle;
+    vertical-align: middle;
+}
+#linkarea ul li{
+    margin: 10px 0px;
+}
+#linkarea ul li a{
+    color: white;
+    font-size: 14px;
+}
+#linkarea img{
+    height: 7px;
+    margin: 0px 4px 2px 0px;
+}
+#parea{
+    display: inline-block;
+    width: 592px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 25px;
+    color: white;
+}
+#parea p{
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+#parea h2{
+    color: #fad131;
+    font-style: italic;
+    font-size: 16.5px;
+    font-weight: 100;
+    line-height: 15px;
+}
+#parea h3{
+    font-weight: 100;
+    font-size: 14px;
+}
+#mainbottom{
+    height: 215px;
+    background-color: white;
+    border-top: 1px solid #082743;
+    text-align: center;
+}
+.section{
+    height: 190px;
+    width: 398px;
+    display: inline-block;
+    vertical-align: top;
+    border-top: 4px solid #73a7d5;
+    margin: 10px 10px;
+}
+.section a{
+    color: #78aad6;
+    text-decoration: none;
+}
+.sechead h2{
+    margin-right: 82px;
+    font-size: 14px;
+    font-weight: 100;
+    margin-top: 5px;
+}
+.secp{
+    width: 281px;
+    margin: 5px 10px 10px 20px;
+}
+.secp p{
+    font-size: 12px;
+}
+.secp p a{
+    font-size: 9px;
+}
+.seclist ul{
+    list-style-type: square;
+    width: 225px;
+    margin: 0px 55px;
+}
+#footer{
+    height: 100px;
+    background-image: linear-gradient(#255175, #3674A9);
+    border-top: 1px solid #144269;
+    border-bottom: 1px solid #266AA4;
+    text-align: center;
+    color: #82b5e1;
+}
+#flinks{
+    margin-top: 52px;
+    margin-right: 15px;
+}
+#flinks a{
+    color: #82b5e1;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 0px 25px;
+}
+#copyright p{
+    font-size: 8px;
+    margin-top: 21px;
+    margin-right: 60px;
+}
