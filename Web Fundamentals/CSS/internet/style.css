@@ -1,46 +1,326 @@
 *{
     margin: 0px;
     padding: 0px;
-    outline: 1px solid blue;
-    font-size: 0px;
+    /* outline: 1px dotted blue; */
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .container{
-    width: 1000px;
-    height: 1000px;
+    width: 840px;
+    height: 642px;
     margin: 0px auto;
 }
 
 .header{
-    height: 125px;
-    width: 1000px;
+    height: 122px;
+    width: 840px;
 }
 
-.logoGroup{
-    height: 100px;
-    width: 300px;
-}
-
-.logoGroup img{
+.header img{
     height: 90px;
+    display: inline-block;
+    vertical-align: top;
+    position: absolute;
 }
 
-.logoGroup h1{
+.header h1{
+    font-size: 45px;
+    font-weight: 100;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 20px;
+    margin-left: 95px;
+}
+
+.header h1 span{
+    color: #22659e;
     font-size: 45px;
     font-weight: 100;
 }
 
-.logoGroup h1 span{
-    color: blue;
-}
-
 .headBar{
     height: 50px;
-    width: 1000px;
-    background-image: linear-gradient(blue, white, blue);
+    width: 840px;
+    background-image: linear-gradient(#23669f, #5284ad, #23669f);
 }
 .headBar h2{
     font-size: 25px;
     color: white;
+    font-weight: 100;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.body{
+    height: 520px;
+    width: 840px;
+    background-image: linear-gradient(#e3e3e3, white 20%);
+}
+
+.sideBar{
+    width: 150px;
+    height: 520px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.sideBarTop{
+    width: 150px;
+    height: 165px;
+    border-bottom: 1px solid #9a9a9a;
+}
+
+.sideBarTopText{
+    height: 85px;
+    width: 150px;
+}
+
+.sideBarTopText h4{
+    font-size: 12px;
+    margin: 15px 0px 5px 0px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 3px;
+}
+
+.sideBarTopText h4 span{
+    font-size: 12px;
+    color: #d9231c;
+}
+
+.sideBarTopText h5{
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 3px;
+}
+
+.sideBarTopText h5 span{
+    color: #306fa4;
+}
+
+.sideBarButtons{
+    width: 150px;
+    height: 70px;
+}
+
+.sideBarButtons button{
+    height: 25px;
+    width: 140px;
+    margin-left: 5px;
+    margin-bottom: 4px;
+    color: white;
+    font-size: 12px;
+}
+
+.button1{
+    background-image: linear-gradient(#6a9dc7, #40709a 60%);
+    border: none;
+    box-shadow: 2px 2px 2px #8d8d8e;
+    border-radius: 4px;
+}
+
+.button2{
+    background-image: linear-gradient(#eec07d, #e9750a 60%);
+    border: none;
+    box-shadow: 2px 2px 2px #8d8d8e;
+    border-radius: 4px;
+}
+
+.sideBarBottom{
+    width: 150px;
+    height: 200px;
+    border-top: 1px solid #e5e5e5;
+    padding-top: 10px;
+}
+
+.adImage{
+    width: 150px;
+    margin-top: 15px;
+    display: inline-block;
+    vertical-align: top;
+    box-shadow: 2px 2px 2px #8d8d8e;
+    position: absolute;
+}
+
+.sideBarBottom p{
+    font-size: 16px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.ninja{
+    width: 70px;
+    position: relative;
+    margin-left: 39px;
+}
+
+.sideBarBottom button{
+    height: 23px;
+    width: 130px;
+    margin-left: 10px;;
+    color: white;
+    font-size: 11px;
+    position: relative;
+    background-image: linear-gradient(#7bcedd, #03b5d2 60%);
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.carrot1{
+    font-size: 8px;
+    color: #85deec;
+}
+
+.carrot2{
+    font-size: 8px;
+    color: #85deec;
+}
+
+.carrot3{
+    font-size: 8px;
+}
+
+.mainBody{
+    width: 683px;
+    height: 520px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.mainBodyHeader{
+    height: 50px;
+    width: 655px;
+    border-bottom: 1px solid #9a9a9a;
+    margin-left: 30px;
+}
+
+.homeImage{
+    width: 20px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.mainBodyHeader h6{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    margin-top: 13px;
+    color: #22659e;
+}
+
+.phoneImage{
+    width: 40px;
+    margin-left: 390px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.hours{
+    height: 48px;
+    width: 150px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.hours p{
+    font-size: 9px;
+    margin-left: 4px;
+}
+
+.hours h4{
+    color: #00c0df;
+    font-size: 21px;
+}
+
+.mainBody1{
+    height: 130px;
+    width: 655px;
+    margin-left: 30px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.mainBody1 p{
+    font-size: 13.5px;
+    margin-top: 2px;
+}
+
+.mainBody1 ul{
+    font-size: 13.5px;
+    margin-top: 2px;
+    margin-left: 40px;
+}
+
+.mainBody h5{
+    color: #22659e;
+    font-size: 18px;
+}
+
+.bodyImage{
+    height: 75px;
+    margin-left: 260px;
+}
+
+.mainBody2{
+    height: 150px;
+    width: 655px;
+    margin-left: 30px;
+}
+
+.mainBody2 ol{
+    font-size: 13.5px;
+    margin-top: 3px;
+    margin-left: 40px;
+}
+
+.mainBody2 ol li{
+    margin-top: 3px;
+}
+
+.boldWord{
+    font-weight: bold;
+}
+
+.blueWord{
+    color: #0097ae;
+}
+
+.footer{
+    height: 104px;
+    width: 647px;
+    margin-left: 30px;
+    border-top: 4px solid #0085e0;
+    border-right: 4px solid #0085e0;
+    border-left: 4px solid #0085e0;
+    box-shadow: 2px 0px 2px #8d8d8e;
+}
+
+.footer img{
+    width: 105px;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.footerText{
+    display: inline-block;
+    vertical-align: top;
+    width: 520px;
+    margin-top: 8px;
+}
+
+.footerText p{
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.footerText a{
+    text-decoration: none;
 }
