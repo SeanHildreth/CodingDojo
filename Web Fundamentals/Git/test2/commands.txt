@@ -1,0 +1,23 @@
+cd Web\ Fundamentals/Git/
+mkdir test2
+cd test2
+touch index.html
+touch style.css
+git init
+git config user.name Sean.Hildreth
+git config user.email sean.hildreth@outlook.com
+git add .
+git commit -m "Initial Commit"
+code index.html
+git add index.html
+git commit -m "update html"
+code stlye.css
+git add style.css
+git commit -m "update css"
+git log
+git revert HEAD
+code style.css
+git add style.css
+git commit -m "Updated changes"
+touch commands.txt
+code commands.txt
