@@ -1,10 +1,12 @@
-#ignore the packages dir
+# ignore the packages dir
 packages/
-#ignore the secret.js file
+# ignore the secret.js file
 secret.js
-#ignore any file with a .txt extension
+# ignore any file with a .txt extension
 *.txt
-#ignore any file or dir that begins in log
+# ignore any file or dir that begins in log
 log*
 #ignore the .ssh dir
 .ssh/
+# ignore the node modules
+node_modules/

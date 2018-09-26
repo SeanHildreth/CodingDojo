@@ -1,2 +1,5 @@
 [user]
-	name = sean.hildreth
+	name = SeanHildreth
+	email = sean.hildreth@outlook.com
+[core]
+	editor = code --wait

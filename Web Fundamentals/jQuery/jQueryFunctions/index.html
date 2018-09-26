@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Functions</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<h1 class="header">Welcome to jQuery Functions</h1>
+			<div class="hideShowBox">
+				<button class="clickHide">Hide</button>
+				<img class="hideshowimg" src="images/js_jquery.png" alt="JavaScript and jQuery">
+				<button class="clickShow">Show</button>
+			</div>
+			<div class="slideBox">
+				<button class="clickSlideUp">Slide Up</button>
+				<img class="slideimg" src="images/dojo_white.png" alt="Coding Dojo">
+				<button class="clickSlideDown">Slide down</button>
+			</div>
+			<div class="toggle">
+				<button class="clickToggle">Toggle</button>
+				<img class="toggleimg" src="images/dojo_black.png" alt="Coding Dojo">
+				<button class="clickSlideToggle">Slide Toggle</button>
+			</div>
+			<div class="fade">
+				<button class="clickFadeOut">Fade Out</button>
+				<img class="fadeimg" src="images/dojo_blue.png" alt="Coding Dojo">
+				<button class="clickFadeIn">Fade In</button>
+			</div>
+			<div class="beforeAfter">
+				<button class="clickBefore">Before</button>
+				<p><span class="beforep"></span>ding Do<span class="afterp"></span></p>
+				<button class="clickAfter">After</button>
+			</div>
+			<div class="addClassAppend">
+				<button class="clickAddClass">AddClass</button>
+				<p class="classappendp">Coding <span class="dojo"></span>jo!</p>
+				<button class="clickAppend">Append</button>
+			</div>
+			<div class="htmlText">
+				<button class="clickHtml">HTML</button>
+				<p class="htmltextp">Replace Me!</p>
+				<button class="clickText">Text</button>
+			</div>
+			<div class="AttrVal">
+				<button class="clickAttr">Attribute</button>
+				<input class="attrvalinput" type="date">
+				<button class="clickVal">Value</button>
+			</div>
+		</div>
+
+		<script>
+
+			$(".clickHide").click(function(){
+				$(".hideshowimg").hide()
+			})
+
+			$(".clickShow").click(function(){
+				$(".hideshowimg").show()
+			})
+
+			$(".clickSlideUp").click(function(){
+				$(".slideimg").slideUp()
+			})
+
+			$(".clickSlideDown").click(function(){
+				$(".slideimg").slideDown() 
+			})
+
+			$(".clickToggle").click(function(){
+				$(".toggleimg").toggle()
+			})
+
+			$(".clickSlideToggle").click(function(){
+				$(".toggleimg").slideToggle()
+			})
+
+			$(".clickFadeOut").click(function(){
+				$(".fadeimg").fadeOut()
+			})
+
+			$(".clickFadeIn").click(function(){
+				$(".fadeimg").fadeIn() 
+			})
+
+			$(".clickBefore").click(function(){
+				$(".beforep").before("Co") 
+			})
+
+			$(".clickAfter").click(function(){
+				$(".afterp").after("jo!") 
+			})
+			
+			$(".clickAddClass").click(function(){
+				$(".classappendp").addClass("addClass")
+			})
+
+			$(".clickAppend").click(function(){
+				$(".dojo").append("Do")
+			})
+
+			$(".clickHtml").click(function(){
+				$(".htmltextp").html("<span class='blue'>Coding <b>Dojo!</b></span>") 
+			})
+
+			$(".clickText").click(function(){
+				$(".htmltextp").text("Coding Dojo!") 
+			})
+
+			$(".clickAttr").click(function(){
+				$(".attrvalinput").attr("type", "text") 
+			})
+
+			$(".clickVal").click(function(){
+				$(".attrvalinput:text").val("Coding Dojo!")
+			})
+
+			</script>
+	</body>
+</html>

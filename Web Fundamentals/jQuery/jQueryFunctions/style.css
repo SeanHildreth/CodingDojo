@@ -1,0 +1,133 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	/* outline: 1px solid blue; */
+}
+
+.container{
+	background-image: linear-gradient(#3c4c5b, #009ac7);
+	width:1000px;
+	height:1700px;
+	margin: 0px auto;
+	text-align: center;
+}
+img{
+	max-height: 200px;
+	max-width: 380px;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0px 25px;
+}
+
+button{
+    background-image: linear-gradient(#6a9dc7, #40709a 60%);
+    border: none;
+    box-shadow: 2px 2px 2px #8d8d8e;
+	border-radius: 4px;
+	color: white;
+	height: 100px;
+	width: 250px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 24px;
+	border: 2px solid #3c4c5b;
+	border-radius: 10px;
+}
+
+p{
+	width: 280px;
+	height: 150px;
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 30px;
+	color: white;
+	border: 2px solid #3c4c5b;
+	border-radius: 10px;
+	margin: 0px 75px;
+	line-height: 150px;
+}
+
+input{
+	width: 300px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: middle;
+	border: 2px solid #3c4c5b;
+	border-radius: 10px;
+	font-size: 30px;
+	margin: 0px 60px;
+}
+
+.header{
+	background-image: linear-gradient(#009ac7, #3c4c5b);
+	width: 1000px;
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+	color: white;
+}
+
+.hideShowBox{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.slideBox{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.toggle{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.fade{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.beforeAfter{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.addClassAppend{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.htmlText{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.AttrVal{
+	width:1000px;
+	height:200px;
+	display: inline-block;
+	line-height: 200px;
+}
+
+.addClass{
+	color: red;
+	font-weight: bold;
+}
+
+.blue{
+	color: blue;
+}

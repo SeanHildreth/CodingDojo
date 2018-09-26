@@ -59,47 +59,52 @@
 		function drawWorld()
 		{
 			var output = '';
-			for(var i=0; i<world.length; i++)
+			for(var i=0; i<world.length; i++) // world.length = 7, the amount of internal arrays
 			{
-				output += '<div class="row">';
-				for(var j=0; j<world[i].length; j++)
+				output += '<div class="row">'; // this will add the row class to the output
+				for(var j=0; j<world[i].length; j++) // world[i].length = 10, each length of the array in the [i] spot
 				{
-					output += "<div class='"+mapping[world[i][j]]+"'></div>";
+					output += "<div class='"+mapping[world[i][j]]+"'></div>"; // this will add the mapping color class to the div at the position of world[i][j]
 				}
-				output += '</div>';
+				output += '</div>'; // this will add the closing div tag to the output
 			}
-			document.getElementById('container').innerHTML = output;
+			document.getElementById('container').innerHTML = output; // this will change each element color by elementid into the output
 			// console.log(output);
 		}
 
-		document.onclick = function(e)
+		document.onclick = function(e) // this will run when it detects a click on an element
 		{
 			// console.log('Coordinate Clicked', e.x, e.y);
 
-			var x = Math.floor(e.x/50);
-			var y = Math.floor(e.y/50);
+			var x = Math.floor(e.x/50); // this will divide the x pixel coordinate of the click by 50 to determine which element to effect
+			var y = Math.floor(e.y/50); // this will divide the y pixel coordinate of the click by 50 to determine which element to effect
 
 			// console.log('X, Y', x, y);
 			// console.log('Original Color', world[y][x]);
 
-			console.log('Replace color', world[y][x], ' with color 4 starting from x:', x, 'y:', y);
-			fill(x, y, world[y][x], 4);
+			console.log('Replace color', world[y][x], ' with color 4 starting from x:', x, 'y:', y); // this logs to the console what element it is affecting and how
+			fill(x, y, world[y][x], 4); // this runs the function fill on the element that was clicked on
 		}
 
-		function fill(x,y,original_color, color)
+		function fill(x,y,original_color, color)  //this is the fill function that will run onclick
 		{
+			//set your boundary restrictions here:
+			if(y<0 || y >= 7 || x < 0 || x >= 10)
+				return false; // this if statement sets the boundary to within the length of the array (7) and the internal arrays (10), which makes the boundary only elements that will be colored, and simply end the function if it is
 
-			//your recursion codes here
+			if(world[y][x] != original_color)
+				return false; // this if statement checks the block to make sure it is the same color as the element you clicked, if it is not it returns false, this make sure that when it checks the blocks around it, it only colors the blocks of the same color
 
-			world[y][x] = color;
+			world[y][x] = color; //this actually changes the block to the color onclick
 
-			// your recursion codes here
-
-			drawWorld();
+			fill(x, y - 1,original_color, color); // this recursively calls the function to check the element above the element last changed
+			fill(x, y + 1, original_color, color); // this checks below
+			fill(x - 1, y, original_color, color); // this checks to the left
+			fill(x + 1, y, original_color, color); // this checks to the right
+			
+			drawWorld(); // the changes up to this point have been against the arrays, this redraws the physical page to match the color change
 			
 		}
-
-		drawWorld();
 
 	</script>
 

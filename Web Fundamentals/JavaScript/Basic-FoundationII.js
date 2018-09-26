@@ -132,19 +132,10 @@ function add7(arr){
 // 10. Reverse Array
 
 function revArr(arr){
-    if(arr.length % 2 == 0){
-        for(i = arr.length / 2 - 1; i >= 0; i--){
-            temp = arr[i];
-            arr[i] = arr[arr.length - i - 1];
-            arr[arr.length - i - 1] = temp;
-        }
-    }
-    else if(arr.length % 2 == 1){
-        for(i = arr.length / 2 - 1/2; i >= 0; i--){
-            temp = arr[i];
-            arr[i] = arr[arr.length - i - 1];
-            arr[arr.length - i - 1] = temp;
-        }
+    for(i = 0; i < arr.length / 2; i++){
+        temp = arr[arr.length - i - 1];
+        arr[arr.length - i - 1] = arr[i];
+        arr[i] = temp;
     }
     return arr;
 }
