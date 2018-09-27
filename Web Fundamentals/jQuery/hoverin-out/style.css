@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    /* outline: 1px dotted blue; */
+    font-size: 0px;
+}
+
+.container{
+    width: 1000px;
+    height: 200px;
+    margin: 40px auto;
+    padding: 40px;
+    background-image: linear-gradient(#000000, #06a9e4);
+    border: 2px solid #009ac7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #3c4c5b;
+}
+
+img{
+    height: 196px;
+    width: 196px;
+    border: 2px solid #009ac7;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px #3c4c5b;
+    margin-left: 40px;
+    background-image: linear-gradient(#009ac7, #3c4c5b);
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Street Fighter</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script class="cufon" src="https://cdnjs.cloudflare.com/ajax/libs/cufon/1.09i/cufon-yui.min.js"></script>
+        <script class="font" src="Saiyan_Sans.font.js"></script>
+        <script class="cufonrep">Cufon.replace("*");</script>
+        <script>
+                function load_js(){
+                $('.cufon').attr('src', $('.cufon').attr('src')).appendTo('head');
+                $('.font').attr('src', $('.font').attr('src')).appendTo('head');
+                eval('Cufon.replace("*");');
+                console.log("reloading");
+            }
+            load_js();
+        </script>
+        <script>
+
+            function attach_handlers(){
+                $('.backbtn').on('click', function(){
+                    location.reload();
+
+                $('option').on('change', function(){
+
+                    $('.leftplayers').change(function(){
+                       $('.playerleft').attr('src', $('select option:selected').attr('value'))
+                       $('.playerleft').css('display', 'inline-block')
+                       console.log($('select option:selected').attr('value'))
+                    });
+    
+    
+                    $('.rightplayers').change(function(){
+                       $('.playerright').attr('src', $('select option:selected').attr('value'))
+                       $('.playerright').css('display', 'inline-block')
+                       console.log($('select option:selected').attr('value'))
+                    });
+
+                });
+
+
+                });
+            }
+
+            $(document).ready(function(){
+
+                
+                $('button').hover(function(){
+                    $(this).parent().parent().css('background-image', $(this).attr('data-alt-src'));
+                }, function(){
+                    $('.background').css('background-image', 'url()');
+                });
+                
+                $('button').click(function(){                
+                    $(this).parent().parent().css('background-image', $(this).attr('data-alt-src'));
+                    $('.selectionBox').html(
+                        '<h1>Select Players</h1><form><select name="players" form="playerSelect"><option value=""></option><option value="images/goku.png">Goku</option><option value="images/vegeta.png">Vegeta</option><option value="images/hit.png">Hit</option><option value="images/rose.png">Goku Rose</option></select><select name="players" form="playerSelect"><option value=""></option><option value="images/goku1.png">Goku</option><option value="images/vegeta1.png">Vegeta</option><option value="images/hit1.png">Hit</option><option value="images/rose1.png">Goku Rose</option></select></form><button  class="backbtn" type="button">Back</button>'
+                        );
+                    attach_handlers();
+                    load_js();
+                });
+
+                 
+
+
+            })
+        
+        
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="background">
+                <div class="p=layerarea"></div>
+                    <img class="playerleft" src="images/goku.png" alt="Player1">
+                    <img class="playerright" src="images/goku1.png" alt="Player2">
+                <div class="selectionBox">
+                    <h1>Select Arena</h1>
+                    <button class="arena" data-alt-src="url(images/arena.jpg)" type="button">Arena</button>
+                    <button class="hills" data-alt-src="url(images/hills.png)" type="button">Hills</button>
+                    <button class="kingkai" data-alt-src="url(images/kingkai.png)" type="button">King Kai's</button>
+                    <button class="namek" data-alt-src="url(images/namek.jpg)" type="button">Namek</button>
+                    <button class="sky" data-alt-src="url(images/gokus.png)" type="button">Goku's</button>
+                    <button class="snakeway" data-alt-src="url(images/snakeway.jpg)" type="button">Snake Way</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

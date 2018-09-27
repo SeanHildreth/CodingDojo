@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Hover In/Out</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+                <img src='ninjab.png' data-alt-src='ninjay.png' alt="Ninjas" />
+                <img src='ninjab.png' data-alt-src='ninjay.png' alt="Ninjas" />
+                <img src='ninjab.png' data-alt-src='ninjay.png' alt="Ninjas" />
+                <img src='ninjab.png' data-alt-src='ninjay.png' alt="Ninjas" />
+        </div>
+        <script>
+            
+            var srcimg = $('img').attr('src');
+            var altimg = $('img').attr('data-alt-src');
+            $('img').hover(function(){
+				$(this).attr('src', altimg);
+			}, function(){
+				$(this).attr('src', srcimg);
+			});
+        
+        </script>
+    </body>
+</html>

@@ -10,3 +10,5 @@ log*
 .ssh/
 # ignore the node modules
 node_modules/
+#ignore any file with a .epub extension
+*.epub
