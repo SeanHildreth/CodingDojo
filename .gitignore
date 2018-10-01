@@ -2,8 +2,6 @@
 packages/
 # ignore the secret.js file
 secret.js
-# ignore any file with a .txt extension
-*.txt
 # ignore any file or dir that begins in log
 log*
 #ignore the .ssh dir
