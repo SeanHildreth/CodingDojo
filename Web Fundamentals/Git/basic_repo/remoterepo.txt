@@ -1,0 +1,18 @@
+*on browser
+navigate to GitHub.com
+create new repository named basic_repo
+
+*on git bash
+cd Desktop/
+mkdir basic_repo
+git init
+touch remoterepo.txt
+code remoterepo.txt
+git remote add origin git@github.com:SeanHildreth/basic_repo.git
+git add remoterepo.txt
+git commit -m "Initial Commit"
+git push -u origin master
+code remoterepo.txt
+git add remoterepo.txt
+git commit -m "updated remoterepo.txt"
+git push -u origin master

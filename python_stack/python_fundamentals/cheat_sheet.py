@@ -63,3 +63,5 @@ def add(a,b):
     return x # the return value gets assigned to the "result" variable
 result = add(3,5)
 print(result) # this should print 8
+# ternary operator
+ print('Coding Dojo' if stacks >= 3 else 'You are not Coding Dojo!')

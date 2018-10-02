@@ -1,0 +1,5 @@
+*I forked the repo on github.com
+*Cloned the repo onto my local machine
+*made changes to the .html file
+*added, commited, and pushed back to the remote repo
+*created a pull request
