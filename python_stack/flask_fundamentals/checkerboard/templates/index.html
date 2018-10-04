@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Checkerboard</title>
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                font-size: 0px;
+                text-align: center;
+            }
+            .container{
+                min-width: 100px;
+                min-height: 100px;
+                margin: 10px auto;
+            }
+
+            table{
+                display: inline-block;
+                vertical-align: top;
+                font-size: 0px;
+                border-collapse: collapse;
+            }
+
+            table td tr{
+                display: inline-block;
+                vertical-align: top;
+                font-size: 0px; 
+            }
+
+            .box1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                display: inline-block;
+                vertical-align: top;
+            }
+
+            .box2{
+                width: 100px;
+                height: 100px;
+                background-color: black;
+                display: inline-block;
+                vertical-align: top;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table>
+                {% for num in range(y) %}
+                    {% if num % 2 == 0 %}
+                        <tr>
+                            {% for num2 in range(x) %}
+                                {% if num2 % 2 == 0 %}
+                                    <td>
+                                        <div class="box1"></div>
+                                    </td>
+                                {% endif %}
+                                {% if num2 % 2 != 0 %}
+                                    <td>
+                                        <div class="box2"></div>
+                                    </td>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endif %}
+                    {% if num % 2 != 0 %}
+                        <tr>
+                                {% for num2 in range(x) %}
+                                    {% if num2 % 2 == 0 %}
+                                        <td>
+                                            <div class="box2"></div>
+                                        </td>
+                                        {% endif %}
+                                        {% if num2 % 2 != 0 %}
+                                        <td>
+                                            <div class="box1"></div>
+                                        </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                    {% endif %}
+                {% endfor %}
+
+
+            </table>
+        </div>
+    </body>
+</html>

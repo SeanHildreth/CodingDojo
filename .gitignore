@@ -1,12 +1,67 @@
 # ignore the packages dir
+######################################
 packages/
+
+
 # ignore the secret.js file
+######################################
 secret.js
+
+
 # ignore any file or dir that begins in log
+#########################################################
 log*
+
+
 #ignore the .ssh dir
+######################################
 .ssh/
+
+
 # ignore the node modules
+######################################
 node_modules/
+
+
 # ignore any file with a .epub extension
+#########################################################
 *.epub
+
+
+# ignore the myEnvironments dir
+#########################################################
+myEnvironments/
+
+
+# ignore these file types
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+############################################################################
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Compiled source #
+######################################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+
+# OS generated files #
+#########################################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
