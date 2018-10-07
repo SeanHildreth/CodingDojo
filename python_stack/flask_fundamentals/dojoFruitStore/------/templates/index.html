@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="../static/css/style.css">
+        <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"> -->
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="header">Dojo Fruit Store!</h2>
+            <div class="maincontent">
+                <h3>What would you like to buy?</h3>
+                <div class="items">
+                    <form action="/checkout">
+                        <div class="table">
+                            <table>
+                                <tr>
+                                    <h4>Fruit Name</h4>
+                                    <td class="straw">Strawberry</td>
+                                    <td class="rasp">Raspberry</td>
+                                    <td class="apple">Apple</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="selection">
+                            <h4>Quantity</h4>
+                            <div class="straw">
+                                <select name="strawberry">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="rasp">
+                                <select name="raspberry">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                            <div class="apple">
+                                <select name="apple">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="user">
+                            <h3>Your Information</h3>
+                            <div class="userinfo">
+                                Name: <input type="text" name="name">
+                                Your Student ID: <input type="text" name="studentid">
+                            </div>
+                        </div>
+                        <input type="submit" value="Buy me stuff!">
+                    </form>
+                </div>
+            </div>
+            <div class="info">
+                <h4>Welcome to Dojo Fruit Store!</h4>
+                <p>Your dojo decided to buy fruits for all the students! Please use this app to tell us what you would like to have! Once we get your order, we'll charge your student account automatically.</p>
+                <p>Dojo Fruit Store is proudly built using flask.</p>
+            </div>
+        </div>
+    </body>
+</html>

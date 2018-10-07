@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Dojo Survey</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <form action="/result" method="POST">
+                Your Name: <input type="text" name="name">
+                Dojo Location:
+                    <select name="dojo">
+                        <option value="Berkeley, CA">Berkeley, CA</option>
+                        <option value="Boise, ID">Boise, ID</option>
+                        <option value="Chicago, IL">Chicago, IL</option>
+                        <option value="Dallas, TX">Dallas, TX</option>
+                        <option value="Los Angeles, CA">Los Angeles, CA</option>
+                        <option value="Seattle, WA">Seattle, WA</option>
+                        <option value="Silicon Valley, CA">Silicon Valley, CA</option>
+                        <option value="Tulsa, OK">Tulsa, OK</option>
+                        <option value="Tyson's Corner, VA">Tyson's Corner, VA</option>
+                        <option value="Online">Online</option>
+                    </select>
+                Favorite Language:
+                    <select name="favlang">
+                        <option value="C#">C#</option>
+                        <option value="Java">Java</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">Python</option>
+                        <option value="Ruby">Ruby</option>
+                        <option value="Swift">Swift</option>
+                    </select>
+                Comment (optional): <textarea name="comment" cols="30" rows="10"></textarea>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+</body>
+</html>

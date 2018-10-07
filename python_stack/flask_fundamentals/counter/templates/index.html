@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Counter</title>
+        <style>
+            .container{
+                text-align: center;
+                padding-top: 200px;
+            }
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+
+            button{
+                margin: 20px;
+                height: 30px;
+                width: 100px;
+                font-size: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Counter</h1>
+            {% if count == 1 %}
+                <h3>{{ count }} time.</h3>
+            {% else %}
+                <h3>{{ count }} times.</h3>
+            {% endif %}
+            <button><a href="/add2">+2</a></button>
+            <button><a href="/destroy_session">Reset</a></button>
+        </div>
+    </body>
+</html>
