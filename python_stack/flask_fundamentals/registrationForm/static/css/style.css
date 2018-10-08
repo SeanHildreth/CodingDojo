@@ -1,0 +1,68 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container{
+    min-height: 600px;
+    width: 520px;
+    border: 3px solid black;
+    margin: 30px auto;
+    font-size: 30px;
+    padding: 40px;
+}
+
+.container p{
+    font-size: 20px;
+}
+
+input[type=text], [type='date'], [type='password']{
+    width: 208px;
+    padding: 12px 20px;
+    margin:  10px 0px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=submit] {
+    width: 20%;
+    background-color: lightblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 2px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 4px 4px black;
+    float: right;
+}
+
+input[type=submit]:hover {
+    background-color: lightskyblue;
+}
+
+input[name='email'] {
+    margin-left: 182px;
+}
+
+input[name='fname'] {
+    margin-left: 120px;
+}
+
+input[name='lname'] {
+    margin-left: 123px;
+}
+
+input[name='pass'] {
+    margin-left: 139px;
+}
+
+input[name='cpass'] {
+    margin-left: 30px;
+}
+
+input[name='bday'] {
+    margin-left: 149px;
+}
