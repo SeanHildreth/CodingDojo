@@ -1,0 +1,47 @@
+user1 = User.objects.create(first_name='Josh', last_name='Bosh', email='jbosh@email.com')
+user2 = User.objects.create(first_name='Bob', last_name='Job', email='Bobj@email.com')
+user3 = User.objects.create(first_name='Nate', last_name='Bate', email='nateBate@email.com')
+
+
+user_book1 = Book.objects.create(name="Wizard's First Rule", desc="A story about Richard and Kahlan", uploader=user1)
+user_book2 = Book.objects.create(name="Stone of Tears", desc="Another story about Richard and Kahlan", uploader=user1)
+
+
+user2_book1 = Book.objects.create(name="Blood of the Fold", desc="Another story about Richard and Kahlan", uploader=user2)
+user2_book2 = Book.objects.create(name="Temple of the Winds", desc="Another story about Richard and Kahlan", uploader=user2)
+
+
+user3_book1 = Book.objects.create(name="Soul of the Fire", desc="Another story about Richard and Kahlan", uploader=user3)
+user3_book2 = Book.objects.create(name="Faith of the Fallen", desc="Another story about Richard and Kahlan", uploader=user3)
+
+
+user1.books_liked.add(user3_book2)
+user1.books_liked.add(user_book1)
+
+
+user2.books_liked.add(user_book1)
+user2.books_liked.add(user2_book1)
+
+
+user3.books_liked.add(user_book1)
+user3.books_liked.add(user_book2)
+user3.books_liked.add(user2_book1)
+user3.books_liked.add(user2_book2)
+user3.books_liked.add(user3_book1)
+user3.books_liked.add(user3_book2)
+
+
+book1_likes = user_book1.users_liked.all()
+book1_likes.values()
+
+
+book1_uploader = user_book1.uploader
+book1_uploader.__dict__
+
+
+book2_likes = user_book2.users_liked.all()
+book2_likes.values()
+
+
+book2_uploader = user_book2.uploader
+book2_uploader.__dict__

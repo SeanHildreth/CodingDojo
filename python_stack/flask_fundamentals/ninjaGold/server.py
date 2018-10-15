@@ -16,7 +16,7 @@ def index():
     y = session['activities']
     print('*'*50)
     print(y)
-    amount = '<input type="number" class="form-control" name="Amount" value="' + str(x) + '" disabled>'
+    amount = str(x)
     print('*'*50)
     return render_template('index.html', amount = amount, act = y)
 

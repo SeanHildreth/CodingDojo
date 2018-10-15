@@ -1,0 +1,14 @@
+pymysql.err.OperationalError: (1045, "Access denied for user 'root'@'localhost' (us
+ing password: YES)")
+
+fix: Supplied the correct password.
+
+pymysql.err.OperationalError: (1045, "Access denied for user 'roo'@'localhost' (u
+sing password: YES)")
+
+fix: Supplied the correct username.
+
+pymysql.err.OperationalError: (2003, "Can't connect to MySQL server on '192.0.0.1
+' (timed out)")
+
+fix: Supplied the correct host path.

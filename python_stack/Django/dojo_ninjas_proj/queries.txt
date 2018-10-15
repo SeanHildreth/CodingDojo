@@ -1,0 +1,68 @@
+
+dojo1 = Dojo.objects.create(name='LA', city='Los Angeles', state='CA')
+dojo1.__dict__
+
+dojo2 = Dojo.objects.create(name='TC', city='Tysons Corner', state='VA')
+dojo2.__dict__
+
+dojo3 = Dojo.objects.create(name='CH', city='Chicago', state='IL')
+dojo3.__dict__
+
+
+dojo1.delete()
+dojo2.delete()
+dojo3.delete()
+
+
+dojo4 = Dojo.objects.create(name='PNW', city='Seattle', state='WA')
+dojo4.__dict__
+
+dojo5 = Dojo.objects.create(name='DFW', city='Dallas', state='TX')
+dojo5.__dict__
+
+dojo6 = Dojo.objects.create(name='SV', city='Silicon Valley', state='CA')
+dojo6.__dict__
+
+
+ninja1 = Ninja.objects.create(first_name='Sean', last_name='Hildreth', dojo=dojo4)
+ninja1.__dict__
+
+ninja2 = Ninja.objects.create(first_name='Paul', last_name='Walker', dojo=dojo4)
+ninja2.__dict__
+
+ninja3 = Ninja.objects.create(first_name='Dwayne', last_name='Johnson', dojo=dojo4)
+ninja3.__dict__
+
+
+ninja4 = Ninja.objects.create(first_name='Michelle', last_name='Rodriguez', dojo=dojo5)
+ninja4.__dict__
+
+ninja5 = Ninja.objects.create(first_name='Tyrese', last_name='Gibson', dojo=dojo5)
+ninja5.__dict__
+
+ninja6 = Ninja.objects.create(first_name='Vin', last_name='Diesel', dojo=dojo5)
+ninja6.__dict__
+
+
+ninja7 = Ninja.objects.create(first_name='Sung', last_name='Kang', dojo=dojo6)
+ninja7.__dict__
+
+ninja8 = Ninja.objects.create(first_name='Gal', last_name='Gadot', dojo=dojo6)
+ninja8.__dict__
+
+ninja9 = Ninja.objects.create(first_name='Jordana', last_name='Brewster', dojo=dojo6)
+ninja9.__dict__
+
+
+dojofirst_ninjas = Ninja.objects.filter(dojo=Dojo.objects.get(id=4))
+dojofirst_ninjas.values()
+
+dojolast_ninjas = Ninja.objects.filter(dojo=Dojo.objects.get(id=4))
+dojolast_ninjas.values()
+
+ninja9.dojo
+ninja9.dojo.__dict__
+
+
+dojo7 = Dojo.objects.create(name='SD', city='San Diego', state='CA', desc='This dojo is brand new and just opened!')
+dojo7.__dict__

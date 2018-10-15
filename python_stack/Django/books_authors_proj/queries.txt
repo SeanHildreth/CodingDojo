@@ -1,0 +1,105 @@
+book1 = Book.objects.create(name='C Sharp', desc='A book about C#')
+book1.__dict__
+
+book2 = Book.objects.create(name='Java', desc='A book about Java')
+book2.__dict__
+
+book3 = Book.objects.create(name='Python', desc='A book about Python')
+book3.__dict__
+
+book4 = Book.objects.create(name='PHP', desc='A book about PHP')
+book4.__dict__
+
+book5 = Book.objects.create(name='Ruby', desc='A book about Ruby')
+book5.__dict__
+
+
+author1 = Author.objects.create(first_name='Jane', last_name='Austen', email='janeAusten@authors.com')
+author1.__dict__
+
+author2= Author.objects.create(first_name='Emily', last_name='Dickinson', email='emilyDickinson@authors.com')
+author2.__dict__
+
+author3 = Author.objects.create(first_name='Fyodor', last_name='Dostoevksy', email='fyodorDostoevksy@authors.com')
+author3.__dict__
+
+author4 = Author.objects.create(first_name='William', last_name='Shakespeare', email='williamShakespeare@authors.com')
+author4.__dict__
+
+author5 = Author.objects.create(first_name='Lau', last_name='Tzu', email='lauTzu@authors.com')
+author5.__dict__
+
+
+get_book1 = Book.objects.get(id=1)
+get_book1.__dict__
+
+get_book1.name = 'C#'
+get_book1.save()
+get_book1.__dict__
+
+
+get_author4 = Author.objects.get(id=4)
+get_author4.__dict__
+
+get_author4.first_name = 'Bill'
+get_author4.save()
+get_author4.__dict__
+
+
+get_author1 = Author.objects.get(id=1)
+get_book2 = Book.objects.get(id=2)
+get_author1.books.add(get_book1)
+get_author1.books.add(get_book2)
+author1_books = get_author1.books.all()
+author1_books.values()
+
+
+get_author2 = Author.objects.get(id=2)
+get_book3 = Book.objects.get(id=3)
+get_author2.books.add(get_book1)
+get_author2.books.add(get_book2)
+get_author2.books.add(get_book3)
+author2_books = get_author2.books.all()
+author2_books.values()
+
+
+get_author3 = Author.objects.get(id=3)
+get_book4 = Book.objects.get(id=4)
+get_author3.books.add(get_book1)
+get_author3.books.add(get_book2)
+get_author3.books.add(get_book3)
+get_author3.books.add(get_book4)
+author3_books = get_author3.books.all()
+author3_books.values()
+
+
+get_book5 = Book.objects.get(id=5)
+get_author4.books.add(get_book1)
+get_author4.books.add(get_book2)
+get_author4.books.add(get_book3)
+get_author4.books.add(get_book4)
+get_author4.books.add(get_book5)
+author4_books = get_author4.books.all()
+author4_books.values()
+
+
+book3_authors = get_book3.authors.all()
+book3_authors.values()
+
+
+get_book3.authors.remove(get_author2)
+book3_authors.values()
+
+
+get_author5 = Author.objects.get(id=5)
+get_book2.authors.add(get_author5)
+book2_authors = get_book2.authors.all()
+book2_authors.values()
+
+
+author3_books = get_author3.books.all()
+author3_books.values()
+
+
+book5_authors = get_book5.authors.all()
+book5_authors.values()

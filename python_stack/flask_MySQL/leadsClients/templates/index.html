@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+        <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+        <title>Leads and Clients</title>
+        <script>
+                window.onload = function () {
+                
+                var options = {
+                    title: {
+                        text: "Customers and number of new leads"
+                    },
+                    animationEnabled: true,
+                    data: [{
+                        type: "pie",
+                        startAngle: 40,
+                        toolTipContent: "<b>{label}</b>: {y}%",
+                        showInLegend: "true",
+                        legendText: "{label}",
+                        indexLabelFontSize: 16,
+                        indexLabel: "{label} - {y}",
+                        dataPoints: [
+                            {% for idx in clients %}
+                                { y: "{{ idx['leads'] }}", label: "{{ idx['client_name'] }}" },
+                            {% endfor %}
+                        ]
+                    }]
+                };
+                $("#chartContainer").CanvasJSChart(options);
+                
+                }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="jumbotron bg-primary text-white">
+                <h1 class="display-4 text-center">Leads and Clients</h1>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <form action="/dates" method="POST">
+                        <div class="col-7 text-center d-inline">
+                            <div class="input-group input-group-lg">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text bg-success border-dark">From and To</span>
+                                </div>
+                                <input type="date" class="form-control" name="from">
+                                <input type="date" class="form-control" name="to">
+                            </div>
+                            <div class="col-7 d-inline">
+                                <div class="input-group input-group-lg">
+                                    <input class="btn btn-info btn-lg btn-block border-dark" type="submit" value="Update">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <p class="lead text-center">Dates bewteen 01-01-2011 and 11-25-2013</p>
+            </div>
+            <h2 style="text-decoration: underline">List of all customers and # of leads</h2>
+            <div class="row">
+                <div class="col-8">
+                    <table class="table table-striped">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Customer Name</th>
+                                <th scope="col">Number of Leads</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for idx in clients %}
+                                <tr>
+                                    <td>{{ idx['client_name'] }}</td>
+                                    <td>{{ idx['leads'] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                    <div id="chartContainer" style="height: 500px; width: 100%;"></div>
+            </div>
+        </div>
+    </body>
+</html>

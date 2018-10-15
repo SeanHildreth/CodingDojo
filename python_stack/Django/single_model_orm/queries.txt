@@ -1,0 +1,28 @@
+user1 = User.objects.create(first_name='Sean', last_name='Hildreth', email_address='sean.hildreth@outlook.com', age=29)
+
+user2 = User.objects.create(first_name='Bob', last_name='Bobberton', email_address='bob_bobber@email.com', age=40)
+
+user3 = User.objects.create(first_name='John', last_name='Doe', email_address='john.doe@email.com', age=35)
+
+all_users = User.objects.all()
+all_users.values()
+
+last_user = User.objects.last()
+last_user.__dict__
+
+first_user = User.objects.first()
+first_user.__dict__
+
+user_3 = User.objects.get(id=3)
+user_3.last_name = 'Pancakes'
+user_3.save()
+user_3.__dict__
+
+user_2 = User.objects.get(id=2)
+user_2.delete()
+
+all_users_sort = User.objects.order_by('first_name')
+all_users_sort.values()
+
+all_users_sort_desc = User.objects.order_by('-first_name')
+all_users_sort_desc.values()
