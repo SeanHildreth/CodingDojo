@@ -23,9 +23,10 @@
             <div class="jumbotron bg-primary text-white">
                 <h1 class="display-4">Thank you for your business!</h1>
             </div>
-            <h4>We charged your account ${{ product.price }}.</h4>
+            <h4>We charged your account ${{ request.session.num }}.</h4>
             <hr class="my-4">
             <h4>You have ordered {{ request.session.purchased }} items so far and spent ${{ request.session.amount }} with Amadon.com!</h4>
+            <a class="btn btn-info" href="/store/" role="button">Go Back</a>
         </div>
     </body>
 </html>

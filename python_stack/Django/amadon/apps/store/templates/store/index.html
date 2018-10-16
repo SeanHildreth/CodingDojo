@@ -38,7 +38,7 @@
                             {% csrf_token %}
                             <tr>
                                 <th scope="row">{{ item.name }}</th>
-                                <td>{{ item.price }}</td>
+                                <td>${{ item.price }}</td>
                                 <td>
                                     <select class="custom-select" name="quantity">
                                         <option value="1">1</option>

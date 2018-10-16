@@ -8,11 +8,6 @@ packages/
 secret.js
 
 
-# ignore any file or dir that begins in log
-#########################################################
-log*
-
-
 #ignore the .ssh dir
 ######################################
 .ssh/
