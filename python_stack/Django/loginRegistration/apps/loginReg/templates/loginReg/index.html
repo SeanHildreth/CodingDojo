@@ -37,53 +37,55 @@
                     <thead>
                         <tr>
                             <td style="width: 680px;">
-                                <form action="/process" method="POST">
+                                <form action="/register" method="POST">
+                                    {% csrf_token %}
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Email:</span>
                                         </div>
-                                        <input type="text" class="form-control" name="email" value="{{ session['email'] }}" placeholder="Email">
+                                        <input type="text" class="form-control" name="email" value="{{ request.session.remember.email }}" placeholder="Email">
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Username:</span>
                                         </div>
-                                        <input type="text" class="form-control" name="username" value="{{ session['username'] }}" placeholder="Username" minlength="2">
+                                        <input type="text" class="form-control" name="username" value="{{ request.session.remember.username }}" placeholder="Username" minlength="2">
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">First Name:</span>
                                         </div>
-                                        <input type="text" class="form-control" name="fname" value="{{ session['fname'] }}" placeholder="First Name" minlength="2">
+                                        <input type="text" class="form-control" name="fname" value="{{ request.session.remember.fname }}" placeholder="First Name" minlength="2">
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Last Name:</span>
                                         </div>
-                                        <input type="text" class="form-control" name="lname" value="{{ session['lname'] }}" placeholder="Last Name" minlength="2">
+                                        <input type="text" class="form-control" name="lname" value="{{ request.session.remember.lname }}" placeholder="Last Name" minlength="2">
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend display-block">
                                             <span class="input-group-text">Address:</span>
                                         </div>
-                                        <input type="text" name="street" value="{{ session['street'] }}" placeholder="Street" class="form-control" style="width: 175px;">
-                                        <input type="text" name="city" value="{{ session['city'] }}" placeholder="City" class="form-control" style="width: 120px;">
+                                        <input type="text" name="street" value="{{ request.session.remember.street }}" placeholder="Street" class="form-control" style="width: 155px;">
+                                        <input type="text" name="apt" value="{{ request.session.remember.apt }}" placeholder="Apt" class="form-control" style="width: 30px;">
+                                        <input type="text" name="city" value="{{ request.session.remember.city }}" placeholder="City" class="form-control" style="width: 110px;">
                                         <select type="text" name="state" class="form-control">
-                                            {% for st in states %}
-                                                {% if st == session['state'] %}
-                                                    <option value='{{ st }}' selected>{{ st }} - {{ states[st] }}</option>
+                                            {% for st, val in states.items %}
+                                                {% if st == request.session.remember.state %}
+                                                    <option value='{{ st }}' selected>{{ st }} - {{ val }}</option>
                                                 {% else %}
-                                                    <option value='{{ st }}'>{{ st }} - {{ states[st] }}</option>
+                                                    <option value='{{ st }}'>{{ st }} - {{ val }}</option>
                                                 {% endif %}
                                             {% endfor %}
                                         </select>
-                                        <input type="text" name="zip" value="{{ session['zip'] }}" placeholder="Zipcode" class="form-control" minlength="5" maxlength="5" style="width: 30px;">
+                                        <input type="text" name="zip" value="{{ request.session.remember.zip }}" placeholder="Zipcode" class="form-control" minlength="5" maxlength="5" style="width: 30px;">
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text">Birthday</span>
                                         </div>
-                                        <input type="date" class="form-control" name="bday" value="{{ session['bday'] }}">
+                                        <input type="date" class="form-control" name="bday" value="{{ request.session.remember.bday }}">
                                     </div>
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
@@ -91,7 +93,7 @@
                                         </div>
                                         <select type="text" name="lang" class="form-control">
                                             {% for lg in langs %}
-                                                {% if lg == session['lang'] %}
+                                                {% if lg == request.session.remember.lang %}
                                                     <option value='{{ lg }}' selected>{{ lg }}</option>
                                                 {% else %}
                                                     <option value='{{ lg }}'>{{ lg }}</option>
@@ -116,6 +118,7 @@
                             </td>
                             <td>
                                 <form action="/login" method="POST">
+                                    {% csrf_token %}
                                     <div class="input-group mb-3">
                                         <div class="input-group-prepend">
                                             <span class="input-group-text" id="basic-addon1">Username:</span>
@@ -130,13 +133,13 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
                                 </form>
-                                {% with messages = get_flashed_messages() %}
-                                    {% if messages %}
+                                {% if messages %}
+                                    <ul class="messages">
                                         {% for message in messages %}
-                                            <p class="lead font-weight-bold text-danger">{{ message }}</p>
+                                            <li>{{ message }}</li>
                                         {% endfor %}
-                                    {% endif %}
-                                {% endwith %}
+                                    </ul>
+                                {% endif %}
                             </td>
                         </tr>
                     </thead>
