@@ -17,21 +17,15 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 
-        <title>Successful Login</title>
+        <title>Successful</title>
     </head>
     <body>
             <div class="container">
-                {% if messages %}
-                    <ul class="messages">
-                        {% for message in messages %}
-                            <li>{{ message }}</li>
-                        {% endfor %}
-                    </ul>
-                {% endif %}
                 <h1>Congratulations! {{ request.session.username }} was logged in!</h1>
                 <form action="/logout">
                     <button type="submit" class="btn btn-primary btn-lg btn-block">Logout!</button>
                 </form>
+                <p class="lead text-success">{{ request.session.message }}</p>
             </div>
     </body>
 </html>

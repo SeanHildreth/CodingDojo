@@ -1,12 +1,14 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib import messages
+from pygeocoder import Geocoder
 from .models import *
 import bcrypt
+
 
 def index(request):
     try:
         if request.session['loggedin'] == True:
-            return redirect('/success')
+            return redirect('/wall')
     except:
         pass
     keys = ['email', 'username', 'fname', 'lname', 'street', 'apt', 'city', 'state', 'zip', 'bday', 'lang']
@@ -28,12 +30,16 @@ def register(request):
             request.session['remember'] = request.POST
             return redirect('/')
         else:
-            request.session.pop('remember')
+            try:
+                del request.session['remember']
+            except:
+                pass
             request.session['loggedin'] = True
             request.session['username'] = request.POST['username']
-            hash_pw = bcrypt.hashpw('test'.encode(), bcrypt.gensalt())
-            new = User.objects.create(email=request.POST['email'], username=request.POST['username'], first_name=request.POST['fname'], last_name=request.POST['lname'], fav_lang=request.POST['lang'], password=hash_pw)
+            hash_pw = bcrypt.hashpw(request.POST['pass'].encode(), bcrypt.gensalt())
+            new = User.objects.create(email=request.POST['email'], username=request.POST['username'], first_name=request.POST['fname'], last_name=request.POST['lname'], fav_lang=request.POST['lang'], password=hash_pw.decode())
             Address.objects.create(user=new, street=request.POST['street'], apt=request.POST['apt'], city=request.POST['city'], state=request.POST['state'], zip=request.POST['zip'])
+            request.session['message'] = 'You have successfully registered a new account!'
             return redirect('/success')
     else:
         return redirect('/')
@@ -49,11 +55,17 @@ def login(request):
         else:
                 request.session['loggedin'] = True
                 request.session['username'] = request.POST['username']
-                return redirect(request, '/success')
+                request.session['message'] = 'You have successfully logged in!'
+                return redirect('/success')
     else:
         return redirect('/')
 
 def success(request):
+    try:
+        if request.session['loggedin'] == True:
+            pass
+    except:
+        return redirect('/')
     return render(request, 'loginReg/success.html')
 
 
