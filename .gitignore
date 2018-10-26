@@ -30,6 +30,8 @@ node_modules/
 # ignore the myEnvironments dir
 #########################################################
 myEnvironments/
+PyProjEnv/
+
 
 # ignore api key files
 ######################################################
