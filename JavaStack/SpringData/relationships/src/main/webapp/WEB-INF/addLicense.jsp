@@ -30,29 +30,30 @@
             <form:form action="/addLicense" method="post" modelAttribute="license">
                 <table class="table table-dark">
                     <tbody>
-                        <tr>
-                            <th scope="col"><form:label path="Person">Person:</form:label></th>
-                            <td><form:errors path="Person"/></td>
-                            <td><form:select path="Person">
-                                <c:forEach items="${persons}" var="person">
-                                    <option value="${person.id}">${person.firstName} ${person.lastName}</option>
-                                </c:forEach>
-                            </form:select></td>
-                        </tr>
-                        <tr>
-                            <th scope="col"><form:label for="stateField" path="state">State:</form:label></th>
-                            <td><form:errors path="state"/></td>
-                            <td><form:input type="text" class="form-control" id="stateField" path="state" placeholder="ST"/></td>
-                        </tr>
-                        <tr>
-                            <th scope="col"><form:label for="dateField" path="expiration_date">Expiration Date:</form:label></th>
-                            <td><form:errors path="expiration_date"/></td>
-                            <td><form:input type="date" class="form-control" id="dateField" path="expiration_date"/></td>
-                        </tr>
-                        <tr>
-                            <td><button type="submit" class="btn btn-primary">Create</button></td>
-                            <td></td>
-                        </tr>
+                    <tr>
+                        <th scope="col"><form:label path="Person">Person:</form:label></th>
+                        <td><form:errors path="Person"/></td>
+                        <td><form:select path="Person">
+                            <c:forEach items="${persons}" var="person">
+                                <option value="${person.id}">${person.firstName} ${person.lastName}</option>
+                            </c:forEach>
+                        </form:select></td>
+                    </tr>
+                    <tr>
+                        <th scope="col"><form:label for="stateField" path="state">State:</form:label></th>
+                        <td><form:errors path="state"/></td>
+                        <td><form:input type="text" class="form-control" id="stateField" path="state" placeholder="ST"/></td>
+                    </tr>
+                    <tr>
+                        <th scope="col"><form:label for="dateField" path="expiration_date">Expiration Date:</form:label></th>
+                        <td><form:errors path="expiration_date"/></td>
+                        <td><form:input type="date" class="form-control" id="dateField" path="expiration_date"/></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" class="btn btn-primary">Create</button></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
                     </tbody>
                 </table>
             </form:form>

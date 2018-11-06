@@ -43,6 +43,7 @@
                         <tr>
                             <td><button type="submit" class="btn btn-primary">Create</button></td>
                             <td></td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>
