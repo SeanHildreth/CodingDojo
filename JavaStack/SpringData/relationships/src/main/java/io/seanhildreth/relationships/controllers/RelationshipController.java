@@ -146,7 +146,7 @@ public class RelationshipController {
     @RequestMapping("/categories/{id}")
     public String showCategory(@PathVariable("id") Long id, Model model) {
         Category category = relationshipService.findCategoryById(id);
-        List<Product> products = relationshipService.allProducts();
+        ArrayList<Product> products = relationshipService.allProducts();
         List<Product> categoryProducts = relationshipService.findCategoryById(id).getProducts();
         for(int prod = 0; prod < categoryProducts.size(); prod++) {
             if(products.contains(categoryProducts.get(prod))) {
