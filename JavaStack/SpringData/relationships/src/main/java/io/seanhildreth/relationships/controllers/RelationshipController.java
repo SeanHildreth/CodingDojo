@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Controller
@@ -18,7 +19,7 @@ public class RelationshipController {
     public RelationshipController(RelationshipService relationshipService) { this.relationshipService = relationshipService; }
 
     @RequestMapping("/persons/new")
-    public String index(@ModelAttribute("person") Person person) { return "addPerson.jsp"; }
+    public String person(@ModelAttribute("person") Person person) { return "addPerson.jsp"; }
 
     @RequestMapping("/addPerson")
     public String addPerson(@Valid @ModelAttribute("person") Person person, BindingResult result) {
@@ -37,8 +38,12 @@ public class RelationshipController {
     }
 
     @RequestMapping("/addLicense")
-    public String addLicense(@Valid @ModelAttribute("license") License license, BindingResult result) {
-        if(result.hasErrors()) { return "addLicense.jsp"; }
+    public String addLicense(@Valid @ModelAttribute("license") License license,Model model, BindingResult result) {
+        if(result.hasErrors()) {
+            List<Person> persons = relationshipService.allPersons();
+            model.addAttribute("persons", persons);
+            return "addLicense.jsp";
+        }
         else {
             relationshipService.addLicense(license);
             return "redirect:/persons/new";
@@ -89,7 +94,6 @@ public class RelationshipController {
 
     @RequestMapping("/categories/new")
     public String categories(@ModelAttribute("category") Category category) {
-
         return "addCategory.jsp";
     }
 
@@ -169,4 +173,50 @@ public class RelationshipController {
         relationshipService.catUpdate(category);
         return("redirect:/categories/" + id);
     }
+
+    @RequestMapping("/questions")
+    public String questionDashboard(Model model) {
+        ArrayList<Question> questions = relationshipService.allQuestions();
+        model.addAttribute("questions", questions);
+        return "questionDashboard.jsp";
+    }
+
+    @RequestMapping("/questions/new")
+    public String newQuestion(@ModelAttribute("newQuestion")Question question) { return "addQuestion.jsp"; }
+
+    @RequestMapping("/addQuestion")
+    public String addQuestion(@Valid @ModelAttribute("newQuestion")Question question, BindingResult result, @RequestParam("tag") String tag) {
+        if(result.hasErrors()) { return "addQuestion.jsp"; }
+        else {
+            Question newQuestion = relationshipService.addQuestion(question);
+            ArrayList<String> allTags = relationshipService.allTagNames();
+            if(tag.contains(",")) {
+                String[]tags = tag.split(",");
+                for(int i = 0; (i < tags.length) && (tags[i] != null); i++) {
+                    Tag newTag = relationshipService.addTag(new Tag(tags[i]));
+                    relationshipService.addQuestionTag(newQuestion, newTag);
+                }
+            }
+            return "redirect:/questions/" + newQuestion.getId();
+        }
+    }
+
+    @RequestMapping("/questions/{id}")
+    public String questionPage(@PathVariable("id")Long id, @ModelAttribute("newAnswer")Answer answer, Model model) {
+        Question question = relationshipService.findQuestionById(id);
+        model.addAttribute("question", question);
+        return "showQuestion.jsp";
+    }
+
+    @RequestMapping("/addAnswer/{id}")
+    public String addAnswer(@PathVariable("id") Long questionId, @Valid @ModelAttribute("newAnswer") Answer answer, BindingResult result) {
+        if(result.hasErrors()) { return "redirect:/questions/" + questionId; }
+        else {
+            Question currQuestion = relationshipService.findQuestionById(questionId);
+            answer.setQuestion(currQuestion);
+            relationshipService.addAnswer(answer);
+            return "redirect:/questions/" + questionId;
+        }
+    }
+
 }

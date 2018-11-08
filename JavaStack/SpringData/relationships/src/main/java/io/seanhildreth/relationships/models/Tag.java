@@ -1,27 +1,34 @@
 package io.seanhildreth.relationships.models;
 
 import javax.persistence.*;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.List;
 
 @Entity
-@Table(name = "dojos")
-public class Dojo {
-
+@Table(name = "tags")
+public class Tag {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Size(min = 4, max = 64)
-    private String name;
+    @Size(min = 1, max = 64)
+    private String tag;
     @Column(updatable = false)
     private Date createdAt;
     private Date updatedAt;
-    @OneToMany(mappedBy = "dojo", fetch = FetchType.LAZY)
-    private List<Ninja> ninjas;
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JoinTable(
+            name = "question_tags",
+            joinColumns = @JoinColumn(name="tag_id"),
+            inverseJoinColumns = @JoinColumn(name="question_id")
+    )
+    private List<Question> questions;
 
-    public Dojo() { }
+    public Tag() { }
+
+    public Tag(String tag) {
+        this.tag = tag;
+    }
 
     public Long getId() {
         return id;
@@ -31,12 +38,12 @@ public class Dojo {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTag() {
+        return tag;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public Date getCreatedAt() {
@@ -55,12 +62,12 @@ public class Dojo {
         this.updatedAt = updatedAt;
     }
 
-    public List<Ninja> getNinjas() {
-        return ninjas;
+    public List<Question> getQuestions() {
+        return questions;
     }
 
-    public void setNinjas(List<Ninja> ninjas) {
-        this.ninjas = ninjas;
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
     }
 
     @PrePersist
