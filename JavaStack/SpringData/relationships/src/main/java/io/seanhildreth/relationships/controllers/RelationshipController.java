@@ -190,11 +190,16 @@ public class RelationshipController {
         else {
             Question newQuestion = relationshipService.addQuestion(question);
             ArrayList<String> allTags = relationshipService.allTagNames();
+            System.out.println(allTags);
             if(tag.contains(",")) {
                 String[]tags = tag.split(",");
                 for(int i = 0; (i < tags.length) && (tags[i] != null); i++) {
-                    Tag newTag = relationshipService.addTag(new Tag(tags[i]));
-                    relationshipService.addQuestionTag(newQuestion, newTag);
+                    if(allTags.contains(tags[i]) == false) {
+                        Tag newTag = relationshipService.addTag(new Tag(tags[i]));
+                        relationshipService.addQuestionTag(newQuestion, newTag);
+                    } else {
+                        relationshipService.addQuestionTag(newQuestion, relationshipService.findTagByName(tags[i]));
+                    }
                 }
             }
             return "redirect:/questions/" + newQuestion.getId();
