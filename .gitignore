@@ -35,7 +35,7 @@ PyProjEnv/
 
 # ignore api key files
 ######################################################
-api*
+api.py
 
 
 # ignore these file types
