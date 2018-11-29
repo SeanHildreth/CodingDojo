@@ -1,6 +1,6 @@
 var array = [21, -5, -6, 18, 42, 55, 97, 88, -60, 11, 20, 9, 5, 89, -69, 45]
 
-function maxminavg(arr) {
+function maxMinAvg(arr) {
     let max = arr[0], min = arr[0], avg = 0;
     for(let idx = 0; idx < arr.length; idx++) {
         if(arr[idx] > max) {
@@ -15,4 +15,4 @@ function maxminavg(arr) {
     console.log(avg);
 }
 
-maxminavg(array);
+maxMinAvg(array);
