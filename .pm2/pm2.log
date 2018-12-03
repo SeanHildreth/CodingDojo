@@ -1,0 +1,162 @@
+2018-11-30T12:22:39: PM2 log: ===============================================================================
+2018-11-30T12:22:39: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2018-11-30T12:22:39: PM2 log: Time                 : Fri Nov 30 2018 12:22:39 GMT-0800 (Pacific Standard Time)
+2018-11-30T12:22:39: PM2 log: PM2 version          : 3.2.2
+2018-11-30T12:22:39: PM2 log: Node.js version      : 11.3.0
+2018-11-30T12:22:39: PM2 log: Current arch         : x64
+2018-11-30T12:22:39: PM2 log: PM2 home             : C:\Users\SgtSu\Desktop\CodingDojo\.pm2
+2018-11-30T12:22:39: PM2 log: PM2 PID file         : C:\Users\SgtSu\Desktop\CodingDojo\.pm2\pm2.pid
+2018-11-30T12:22:39: PM2 log: RPC socket file      : \\.\pipe\rpc.sock
+2018-11-30T12:22:39: PM2 log: BUS socket file      : \\.\pipe\pub.sock
+2018-11-30T12:22:39: PM2 log: Application log path : C:\Users\SgtSu\Desktop\CodingDojo\.pm2\logs
+2018-11-30T12:22:39: PM2 log: Process dump file    : C:\Users\SgtSu\Desktop\CodingDojo\.pm2\dump.pm2
+2018-11-30T12:22:39: PM2 log: Concurrent actions   : 2
+2018-11-30T12:22:39: PM2 log: SIGTERM timeout      : 1600
+2018-11-30T12:22:39: PM2 log: ===============================================================================
+2018-11-30T12:22:39: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:22:39: PM2 log: App [algo:0] online
+2018-11-30T12:22:44: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:22:44: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:22:44: PM2 log: App [algo:0] online
+2018-11-30T12:22:50: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:22:50: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:22:50: PM2 log: App [algo:0] online
+2018-11-30T12:22:55: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:22:55: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:22:55: PM2 log: App [algo:0] online
+2018-11-30T12:23:00: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:00: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:00: PM2 log: App [algo:0] online
+2018-11-30T12:23:05: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:05: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:05: PM2 log: App [algo:0] online
+2018-11-30T12:23:10: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:10: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:10: PM2 log: App [algo:0] online
+2018-11-30T12:23:15: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:15: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:15: PM2 log: App [algo:0] online
+2018-11-30T12:23:21: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:21: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:21: PM2 log: App [algo:0] online
+2018-11-30T12:23:27: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:27: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:27: PM2 log: App [algo:0] online
+2018-11-30T12:23:32: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:32: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:32: PM2 log: App [algo:0] online
+2018-11-30T12:23:36: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:36: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:36: PM2 log: App [algo:0] online
+2018-11-30T12:23:41: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:41: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:41: PM2 log: App [algo:0] online
+2018-11-30T12:23:46: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:23:46: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:23:46: PM2 log: App [algo:0] online
+2018-11-30T12:23:48: PM2 log: Stopping app:algo id:0
+2018-11-30T12:23:48: PM2 log: App [algo:0] exited with code [1] via signal [SIGINT]
+2018-11-30T12:23:48: PM2 log: pid=2020 msg=process killed
+2018-11-30T12:28:09: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:09: PM2 log: App [algo:0] online
+2018-11-30T12:28:14: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:14: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:14: PM2 log: App [algo:0] online
+2018-11-30T12:28:19: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:19: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:19: PM2 log: App [algo:0] online
+2018-11-30T12:28:24: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:24: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:24: PM2 log: App [algo:0] online
+2018-11-30T12:28:28: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:28: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:28: PM2 log: App [algo:0] online
+2018-11-30T12:28:28: PM2 error: Error caught while calling pidusage
+2018-11-30T12:28:28: PM2 error: Error: No maching pid found
+2018-11-30T12:28:33: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:33: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:33: PM2 log: App [algo:0] online
+2018-11-30T12:28:38: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:38: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:38: PM2 log: App [algo:0] online
+2018-11-30T12:28:42: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:42: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:42: PM2 log: App [algo:0] online
+2018-11-30T12:28:47: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:47: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:47: PM2 log: App [algo:0] online
+2018-11-30T12:28:47: PM2 error: Error caught while calling pidusage
+2018-11-30T12:28:47: PM2 error: Error: No maching pid found
+2018-11-30T12:28:52: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:52: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:52: PM2 log: App [algo:0] online
+2018-11-30T12:28:57: PM2 log: App [algo:0] exited with code [0] via signal [SIGINT]
+2018-11-30T12:28:57: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:28:57: PM2 log: App [algo:0] online
+2018-11-30T12:28:58: PM2 log: Stopping app:algo id:0
+2018-11-30T12:28:59: PM2 log: App [algo:0] exited with code [1] via signal [SIGINT]
+2018-11-30T12:28:59: PM2 log: pid=13884 msg=process killed
+2018-11-30T12:29:25: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:29:25: PM2 log: App [algo:0] online
+2018-11-30T12:29:30: PM2 log: App [algo:0] exited with code [134] via signal [SIGINT]
+2018-11-30T12:29:30: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:29:30: PM2 log: App [algo:0] online
+2018-11-30T12:29:36: PM2 log: App [algo:0] exited with code [134] via signal [SIGINT]
+2018-11-30T12:29:36: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:29:36: PM2 log: App [algo:0] online
+2018-11-30T12:29:40: PM2 log: App [algo:0] exited with code [134] via signal [SIGINT]
+2018-11-30T12:29:40: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:29:40: PM2 log: App [algo:0] online
+2018-11-30T12:29:46: PM2 log: App [algo:0] exited with code [134] via signal [SIGINT]
+2018-11-30T12:29:46: PM2 log: App [algo:0] starting in -fork mode-
+2018-11-30T12:29:46: PM2 log: App [algo:0] online
+2018-11-30T12:29:48: PM2 log: Stopping app:algo id:0
+2018-11-30T12:29:48: PM2 log: App [algo:0] exited with code [1] via signal [SIGINT]
+2018-11-30T12:29:49: PM2 log: pid=1668 msg=process killed
+2018-11-30T14:02:17: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:17: PM2 log: App [server:1] online
+2018-11-30T14:02:18: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:18: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:18: PM2 log: App [server:1] online
+2018-11-30T14:02:20: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:20: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:20: PM2 log: App [server:1] online
+2018-11-30T14:02:21: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:21: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:21: PM2 log: App [server:1] online
+2018-11-30T14:02:23: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:23: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:23: PM2 log: App [server:1] online
+2018-11-30T14:02:24: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:24: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:24: PM2 log: App [server:1] online
+2018-11-30T14:02:25: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:25: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:25: PM2 log: App [server:1] online
+2018-11-30T14:02:27: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:27: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:27: PM2 log: App [server:1] online
+2018-11-30T14:02:28: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:28: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:28: PM2 log: App [server:1] online
+2018-11-30T14:02:30: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:30: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:30: PM2 log: App [server:1] online
+2018-11-30T14:02:31: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:31: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:31: PM2 log: App [server:1] online
+2018-11-30T14:02:33: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:33: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:33: PM2 log: App [server:1] online
+2018-11-30T14:02:34: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:34: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:34: PM2 log: App [server:1] online
+2018-11-30T14:02:36: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:36: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:36: PM2 log: App [server:1] online
+2018-11-30T14:02:37: PM2 log: App [server:1] exited with code [0] via signal [SIGINT]
+2018-11-30T14:02:37: PM2 log: App [server:1] starting in -fork mode-
+2018-11-30T14:02:37: PM2 log: App [server:1] online
+2018-11-30T14:02:38: PM2 log: Stopping app:server id:1
+2018-11-30T14:02:38: PM2 log: App [server:1] exited with code [1] via signal [SIGINT]
+2018-11-30T14:02:38: PM2 log: pid=17008 msg=process killed

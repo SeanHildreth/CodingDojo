@@ -1,0 +1,56 @@
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: 00007FF7A377AB9A v8::internal::GCIdleTimeHandler::GCIdleTimeHandler+4810
+ 2: 00007FF7A3720C86 uv_loop_fork+80486
+ 3: 00007FF7A3721BB0 uv_loop_fork+84368
+ 4: 00007FF7A3B9E99E v8::internal::FatalProcessOutOfMemory+798
+ 5: 00007FF7A3B9E8D7 v8::internal::FatalProcessOutOfMemory+599
+ 6: 00007FF7A3E77B54 v8::internal::Heap::RootIsImmortalImmovable+14788
+ 7: 00007FF7A3E75918 v8::internal::Heap::RootIsImmortalImmovable+6024
+ 8: 00007FF7A3A361AD v8::internal::Factory::AllocateRawArray+61
+ 9: 00007FF7A3A36B42 v8::internal::Factory::NewFixedArrayWithFiller+66
+10: 00007FF7A3AB938A v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::KeyAt+76186
+11: 00007FF7A3AA6013 v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::EntryToIndex+76659
+12: 00007FF7A419A250 v8::internal::StoreBuffer::StoreBufferOverflow+64016
+13: 00000135F9550361 
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: 00007FF7A377AB9A v8::internal::GCIdleTimeHandler::GCIdleTimeHandler+4810
+ 2: 00007FF7A3720C86 uv_loop_fork+80486
+ 3: 00007FF7A3721BB0 uv_loop_fork+84368
+ 4: 00007FF7A3B9E99E v8::internal::FatalProcessOutOfMemory+798
+ 5: 00007FF7A3B9E8D7 v8::internal::FatalProcessOutOfMemory+599
+ 6: 00007FF7A3E77B54 v8::internal::Heap::RootIsImmortalImmovable+14788
+ 7: 00007FF7A3E75918 v8::internal::Heap::RootIsImmortalImmovable+6024
+ 8: 00007FF7A3A361AD v8::internal::Factory::AllocateRawArray+61
+ 9: 00007FF7A3A36B42 v8::internal::Factory::NewFixedArrayWithFiller+66
+10: 00007FF7A3AB938A v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::KeyAt+76186
+11: 00007FF7A3AA6013 v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::EntryToIndex+76659
+12: 00007FF7A419A250 v8::internal::StoreBuffer::StoreBufferOverflow+64016
+13: 0000005F57450361 
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: 00007FF7A377AB9A v8::internal::GCIdleTimeHandler::GCIdleTimeHandler+4810
+ 2: 00007FF7A3720C86 uv_loop_fork+80486
+ 3: 00007FF7A3721BB0 uv_loop_fork+84368
+ 4: 00007FF7A3B9E99E v8::internal::FatalProcessOutOfMemory+798
+ 5: 00007FF7A3B9E8D7 v8::internal::FatalProcessOutOfMemory+599
+ 6: 00007FF7A3E77B54 v8::internal::Heap::RootIsImmortalImmovable+14788
+ 7: 00007FF7A3E75918 v8::internal::Heap::RootIsImmortalImmovable+6024
+ 8: 00007FF7A3A361AD v8::internal::Factory::AllocateRawArray+61
+ 9: 00007FF7A3A36B42 v8::internal::Factory::NewFixedArrayWithFiller+66
+10: 00007FF7A3AB938A v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::KeyAt+76186
+11: 00007FF7A3AA6013 v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::EntryToIndex+76659
+12: 00007FF7A419A250 v8::internal::StoreBuffer::StoreBufferOverflow+64016
+13: 00000305DBBD0361 
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: 00007FF7A377AB9A v8::internal::GCIdleTimeHandler::GCIdleTimeHandler+4810
+ 2: 00007FF7A3720C86 uv_loop_fork+80486
+ 3: 00007FF7A3721BB0 uv_loop_fork+84368
+ 4: 00007FF7A3B9E99E v8::internal::FatalProcessOutOfMemory+798
+ 5: 00007FF7A3B9E8D7 v8::internal::FatalProcessOutOfMemory+599
+ 6: 00007FF7A3E77B54 v8::internal::Heap::RootIsImmortalImmovable+14788
+ 7: 00007FF7A3E75918 v8::internal::Heap::RootIsImmortalImmovable+6024
+ 8: 00007FF7A3A361AD v8::internal::Factory::AllocateRawArray+61
+ 9: 00007FF7A3A36B42 v8::internal::Factory::NewFixedArrayWithFiller+66
+10: 00007FF7A3AB938A v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::KeyAt+76186
+11: 00007FF7A3AA6013 v8::internal::HashTable<v8::internal::NumberDictionary,v8::internal::NumberDictionaryShape>::EntryToIndex+76659
+12: 00007FF7A419A250 v8::internal::StoreBuffer::StoreBufferOverflow+64016
+13: 000003E5FE7D0361 

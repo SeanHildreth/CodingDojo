@@ -1,0 +1,38 @@
+2018-11-30T20:24:34.645Z interactor:daemon MACHINE_NAME=Krypton-SP4
+2018-11-30T20:24:34.647Z interactor:daemon PUBLIC_KEY=1bymxkahmtpadwq
+2018-11-30T20:24:34.647Z interactor:daemon WEBSOCKET_ENABLED=true
+2018-11-30T20:24:34.647Z interactor:daemon AXON_ENABLED=false
+2018-11-30T20:24:34.647Z interactor:daemon ROOT_URL=https://root.keymetrics.io
+2018-11-30T20:24:34.647Z interactor:interface New transporter interface
+2018-11-30T20:24:34.647Z interactor:interface Bind [websocket] transport to transporter interface
+2018-11-30T20:24:34.695Z interactor:daemon [PM2 Agent] Launching agent
+2018-11-30T20:24:34.695Z interactor:daemon Launching Interactor RPC server (bind to \\.\pipe\interactor.sock)
+2018-11-30T20:24:35.561Z interactor:interface Transporters are not connected, connect them with: {"push":"https://theta.keymetrics.io:80","ws":"wss://theta.keymetrics.io/interaction/public","reverse":"https://theta.keymetrics.io:43554","realtime":"https://theta.keymetrics.io:443","web":"https://theta.keymetrics.io:443"}
+2018-11-30T20:24:36.445Z interactor:reverse Reverse interactor is listening
+2018-11-30T20:24:36.445Z interactor:daemon Interactor daemon started
+2018-11-30T20:24:36.455Z interactor:pm2:interface PM2Interface instantiate
+2018-11-30T20:24:55.541Z interactor:interface Received event from websocket transporter
+2018-11-30T20:24:55.541Z interactor:reverse New PM2 action triggered : pm2 startLogging {"name":"algo"}
+2018-11-30T20:24:55.542Z interactor:reverse PM2 action ended : pm2 startLogging (no error)
+2018-11-30T20:25:09.058Z interactor:interface Received event from websocket transporter
+2018-11-30T20:25:09.058Z interactor:reverse New PM2 action triggered : pm2 stopLogging {"name":"algo"}
+2018-11-30T20:25:09.058Z interactor:reverse PM2 action ended : pm2 stopLogging (no error)
+2018-11-30T20:27:36.443Z interactor:daemon PM2 Watchdog started
+2018-11-30T20:27:36.443Z interactor:watchdog Launching
+2018-11-30T20:28:28.550Z interactor:interface Received event from websocket transporter
+2018-11-30T20:28:28.550Z interactor:reverse New PM2 action triggered : pm2 startLogging {"name":"algo"}
+2018-11-30T20:28:28.551Z interactor:reverse PM2 action ended : pm2 startLogging (no error)
+2018-11-30T20:28:45.845Z interactor:interface Received event from websocket transporter
+2018-11-30T20:28:45.845Z interactor:reverse New PM2 action triggered : pm2 stopLogging {"name":"algo"}
+2018-11-30T20:28:45.845Z interactor:reverse PM2 action ended : pm2 stopLogging (no error)
+2018-11-30T20:29:31.256Z interactor:interface Received event from websocket transporter
+2018-11-30T20:29:31.256Z interactor:reverse New PM2 action triggered : pm2 startLogging {"name":"algo"}
+2018-11-30T20:29:31.256Z interactor:reverse PM2 action ended : pm2 startLogging (no error)
+2018-11-30T20:29:44.955Z interactor:interface Received event from websocket transporter
+2018-11-30T20:29:44.955Z interactor:reverse New PM2 action triggered : pm2 stopLogging {"name":"algo"}
+2018-11-30T20:29:44.955Z interactor:reverse PM2 action ended : pm2 stopLogging (no error)
+2018-11-30T20:31:00.836Z interactor:daemon Shutdown request received via RPC
+2018-11-30T20:31:00.836Z interactor:daemon Exiting Interactor
+2018-11-30T20:31:00.836Z interactor:reverse Reverse interactor is no longer listening
+2018-11-30T20:31:00.837Z interactor:interface Disconnect all transporters
+2018-11-30T20:31:00.849Z interactor:daemon RPC server closed

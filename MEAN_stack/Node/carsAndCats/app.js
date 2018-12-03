@@ -72,6 +72,34 @@ var server = http.createServer((request, response) => {
             response.end();
         });
     }
+    else if (request.url === "/images/c1.jpg") {
+        fs.readFile('images/c1.jpg', (errors, contents) => {
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents); 
+            response.end();
+        });
+    }
+    else if (request.url === "/images/c2.jpg") {
+        fs.readFile('images/c2.jpg', (errors, contents) => {
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents); 
+            response.end();
+        });
+    }
+    else if (request.url === "/images/c3.jpeg") {
+        fs.readFile('images/c3.jpeg', (errors, contents) => {
+            response.writeHead(200, {'Content-type': 'image/jpeg'});
+            response.write(contents); 
+            response.end();
+        });
+    }
+    else if (request.url === "/images/c4.jpg") {
+        fs.readFile('images/c4.jpg', (errors, contents) => {
+            response.writeHead(200, {'Content-type': 'image/jpg'});
+            response.write(contents); 
+            response.end();
+        });
+    }
     else {
         response.end("URL requested is not available.");
     }
