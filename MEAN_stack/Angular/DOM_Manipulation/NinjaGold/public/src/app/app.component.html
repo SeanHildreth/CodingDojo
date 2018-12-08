@@ -1,0 +1,64 @@
+<div class="container">
+  <div class="jumbotron bg-info text-center text-white border border-dark">
+    <h1 class="display-4">Ninja Gold</h1>
+    <p class="lead">Help a ninja make some money!</p>
+    <div class="row">
+      <div class="col-4 align-self-start">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text bg-success border border-dark text-white" id="basic-addon1">Your Gold</span>
+          </div>
+          <input type="text" class="form-control bg-light border border-dark" value="{{ gold }}" disabled>
+        </div>
+      </div>
+      <div class="col-4 align-self-start">
+      </div>
+      <div class="col-4 align-self-start">
+        <button type="button" class="btn btn-warning border border-dark" (click)="resetGold()">Reset Gold</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="card text-center text-white bg-success mb-3" style="width: 15.8rem;">
+        <div class="card-body">
+          <h5 class="card-title">Farm</h5>
+          <p class="card-text">(Earns 2-5 gold)</p>
+          <button type="button" class="btn btn-warning border border-dark" (click)="farm()">Farm for Gold!</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-center text-white bg-dark mb-3" style="width: 15.8rem;">
+        <div class="card-body">
+          <h5 class="card-title">Cave</h5>
+          <p class="card-text">(Earns 5-10 gold)</p>
+          <button type="button" class="btn btn-warning border border-dark"(click)="cave()">Cave Dive for Treasure!</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-center text-white bg-primary mb-3" style="width: 15.8rem;">
+        <div class="card-body">
+          <h5 class="card-title">House</h5>
+          <p class="card-text">(Earns 7-15 gold)</p>
+          <button type="button" class="btn btn-warning border border-dark" (click)="house()">Work from Home!</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card text-center text-white bg-danger mb-3" style="width: 15.8rem;">
+        <div class="card-body">
+          <h5 class="card-title">Casino</h5>
+          <p class="card-text">(Win or Lose up to 100 gold)</p>
+          <button type="button" class="btn btn-warning border border-dark" (click)="casino()">Gamble your Gold!</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row border border-info bg-light" style="height: 250px; overflow: auto">
+    <div class="h-100 w-100 p-3">
+      <p *ngFor="let activity of activities.reverse()"> {{ activity }} </p>
+    </div>
+  </div>
+</div>
