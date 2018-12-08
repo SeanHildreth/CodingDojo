@@ -2,13 +2,57 @@
 <div class="jumbotron bg-primary text-white text-center">
   <div class="bg-info border border-dark">
     <button type="button" class="btn btn-success m-5" (click)="getTasksFromService()"><h1>All Tasks</h1></button>
-    <p *ngFor="let task of tasks">
-      {{ task.title }}
-      <button type="button" class="btn btn-success" (click)="showTask(task._id)">Show</button>
+    <p *ngFor="let idx of tasks">
+      {{ idx.title }}
+      <button type="button" class="btn btn-success" (click)="showTask(idx._id)">Show</button>
     </p>
   </div>
-  <div *ngIf="task.length > 0" class="bg-dark border border-primary p-5">
-    <p>{{ task }}</p>
+  <div *ngIf="gotTaskDiv === true" class="lead bg-dark border border-light p-5 mt-3">
+    <p>{{ gotTask.task[0].title }}</p>
+    <p>{{ gotTask.task[0].description }}</p>
+    <button type="button" class="btn btn-warning mr-3" (click)="showEdit()">Edit</button>
+    <button type="button" class="btn btn-danger ml-3" (click)="deleteTask(gotTask.task[0]._id)">Delete</button>
+    <div *ngIf="showEditForm === true" class="lead bg-dark border border-light p-5 mt-3">
+      <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+          <form class="form-group" (submit)="updateTask()">
+            <input hidden [value]="editTask.id">
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Task Title:</span>
+              </div>
+              <input type="text" class="form-control" name="editTask.title" [(ngModel)]="editTask.title" />
+            </div>
+            <div class="input-group input-group-sm mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Description</span>
+              </div>
+              <input type="text" class="form-control" name="editTask.description" [(ngModel)]="editTask.description" />
+            </div>
+            <input type="submit" class="btn btn-primary" value="Edit Task">
+          </form>
+        </div>
+        <div class="col-4"></div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-success border border-dark p-5 mt-3">
+    <form class="form-group" (submit)="onSubmit()">
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Task Title:</span>
+        </div>
+        <input type="text" class="form-control" name="newTask.title" [(ngModel)]="newTask.title" />
+      </div>
+      <div class="input-group input-group-sm mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Description</span>
+        </div>
+        <input type="text" class="form-control" name="newTask.description" [(ngModel)]="newTask.description" />
+      </div>
+      <input type="submit" class="btn btn-primary" value="Create Task">
+    </form>
   </div>
 </div>
 
