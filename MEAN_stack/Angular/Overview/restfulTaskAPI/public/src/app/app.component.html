@@ -1,5 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="jumbotron bg-primary text-white text-center">
+  <h1>Restful Tasks API</h1>
+  <app-task *ngIf="gotTaskDiv === true" [taskToShow]="gotTask"></app-task>
   <div class="bg-info border border-dark">
     <button type="button" class="btn btn-success m-5" (click)="getTasksFromService()"><h1>All Tasks</h1></button>
     <p *ngFor="let idx of tasks">
