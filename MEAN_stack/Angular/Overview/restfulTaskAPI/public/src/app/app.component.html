@@ -1,5 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="jumbotron bg-primary text-white text-center">
-  <p *ngFor="let task of tasks">Task: {{ task.title }}, Desc: {{ task.description }}</p>
+  <div class="bg-info border border-dark">
+    <button type="button" class="btn btn-success m-5" (click)="getTasksFromService()"><h1>All Tasks</h1></button>
+    <p *ngFor="let task of tasks">
+      {{ task.title }}
+      <button type="button" class="btn btn-success" (click)="showTask(task._id)">Show</button>
+    </p>
+  </div>
+  <div *ngIf="task.length > 0" class="bg-dark border border-primary p-5">
+    <p>{{ task }}</p>
+  </div>
 </div>
 

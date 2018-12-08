@@ -11,5 +11,19 @@ export class HttpService {
 
   getTasks() { return this._http.get('/tasks'); }
 
-  showTask() { return this._http.get('/task/5c09c3effe54053c5843423c'); }
+  showTask(id) { return this._http.get('/task/' + id); }
+
+  // getFromServer(id) {
+  //   // use the .post() method of HttpClient
+  //   // num must be an object
+  //   // provide the url of your post route - make sure this is set up in your server!
+  //   return this._http.get('/task/' + id);
+  // }
+  //
+  // postToServer(num) {
+  //   // use the .post() method of HttpClient
+  //   // num must be an object
+  //   // provide the url of your post route - make sure this is set up in your server!
+  //   return this._http.post('/tasks', num);
+  // }
 }
