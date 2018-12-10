@@ -1,0 +1,22 @@
+<div class="bg-dark border border-light p-5 mt-3">
+  <div class="row">
+    <div class="col-5">
+      <img [src]="showCake.cake[0].url" alt="cake-img" height="250px">
+    </div>
+    <div class="col-7">
+      <div class="card text-white bg-primary mb-3" style="height: 250px">
+        <div class="card-header">
+          <h5 class="card-title">{{ showCake.cake[0].name }}</h5>
+          <p class="card-text" *ngIf="avgRating">Average Rating: {{ avgRating }} stars!</p>
+          <p class="card-text" *ngIf="!avgRating">No ratings yet!</p>
+        </div>
+        <div class="card-body" style="overflow: auto">
+          <div *ngFor="let rating of showCake.cake[0].ratings">
+            <p class="card-text">{{ rating.rating_text }}</p>
+            <p class="card-text">{{ rating.rating }} stars.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

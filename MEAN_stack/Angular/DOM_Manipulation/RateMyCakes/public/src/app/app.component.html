@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="jumbotron bg-secondary border border-dark text-light text-center py-0 my-3">
+    <h1 class="display-4">Rate My Cakes</h1>
+    <p class="lead">Submit a Cake to be Rated!</p>
+    <hr class="my-4">
+    <form class="form-group" (ngSubmit)="createCake()">
+      <div class="input-group input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">Baker's Name:</span>
+        </div>
+        <input type="text" class="form-control" name="newCake.name" [(ngModel)]="newCake.name" />
+      </div>
+      <div class="input-group input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">URL:</span>
+        </div>
+        <input type="text" class="form-control" name="newCake.url" [(ngModel)]="newCake.url" />
+      </div>
+      <input type="submit" class="btn btn-primary btn-lg btn-block" value="Add Cake">
+    </form>
+  </div>
+  <app-cake [hidden]="!gotCakeDiv" [showCake]="gotCake" [avgRating]="avg"></app-cake>
+  <div class="border border-dark bg-light mt-3" style="height: 400px; overflow: auto">
+    <div class="h-100 w-100 p-3">
+      <div *ngFor="let idx of cakes" class="border border-dark p-2 mb-2">
+        <div class="row">
+          <div class="col-3">
+            <img [src]="idx.url" (click)="showCake(idx._id)" alt="cake-img" height="150px">
+          </div>
+          <div class="col-8">
+            <form class="form-group w-100 mx-3" (ngSubmit)="rateCake(ratingForm.form.value)" #ratingForm="ngForm">
+              <input hidden name="id" [value]="idx._id" ngModel="{{ idx._id }}">
+              <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                  <label class="input-group-text" for="inputGroupSelect01">Rating</label>
+                </div>
+                <select class="custom-select" id="inputGroupSelect01" name="newRating" ngModel>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3" selected>3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+              <div class="input-group input-group mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text">Comment</span>
+                </div>
+                <input type="text" class="form-control" name="newRating_text" placeholder="Type your comment here!" maxlength="128" ngModel>
+              </div>
+              <input type="submit" class="btn btn-primary btn-block" value="Rate Cake!">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
