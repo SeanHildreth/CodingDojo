@@ -1,0 +1,14 @@
+<div class="contianer">
+  <a [routerLink]="['']">Home</a>
+  <h4 style="color: darkorchid">Add a new Author:</h4>
+  <div>
+    <form class="form-group" (ngSubmit)="createAuthor(newAuthor.form.value)" #newAuthor="ngForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" ngModel>
+      </div>
+      <a [routerLink]="['']" class="btn btn-warning active mr-3" role="button" aria-pressed="true">Cancel</a>
+      <input type="submit" class="btn btn-primary" value="Add Author">
+    </form>
+  </div>
+</div>
