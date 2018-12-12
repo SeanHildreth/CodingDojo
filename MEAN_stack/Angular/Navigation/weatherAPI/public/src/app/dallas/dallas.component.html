@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="jumbotron bg-dark border border-primary text-light text-center py-1 my-3">
+    <h1 class="display-4">Dallas, TX</h1>
+    <div class="row">
+      <div class="col-6">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item bg-dark">Humidity: {{ city.main.humidity }}%</li>
+          <li class="list-group-item bg-dark">Temperature (Average): {{ city.main.temp }}°F</li>
+          <li class="list-group-item bg-dark">Temperature (High): {{ city.main.temp_max }}°F</li>
+          <li class="list-group-item bg-dark">Temperature (Low): {{ city.main.temp_min }}°F</li>
+          <li class="list-group-item bg-dark">Status: {{ city.weather[0].description }}</li>
+        </ul>
+      </div>
+      <div class="col-6">
+        <img src="https://images.pexels.com/photos/280193/pexels-photo-280193.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" height="230px" alt="Dallas, TX">
+      </div>
+    </div>
+  </div>
+</div>
