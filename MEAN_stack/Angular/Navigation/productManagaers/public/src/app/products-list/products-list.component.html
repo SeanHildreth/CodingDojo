@@ -1,0 +1,19 @@
+<div class="jumbotron text-center py-1 my-3">
+  <h1 class="display-4">Product List</h1>
+  <div class="row">
+    <div *ngFor="let prod of products" class="col-sm border border-dark rounded m-2 pt-2" style="width: 100%; max-width: 300px; min-width: 200px;">
+      <img *ngIf="prod.url !== ''" [src]="prod.url" style="width: 100%; max-width: 250px">
+      <img *ngIf="prod.url === ''" src="http://www.indiantradebird.in/images/noimage.jpg" style="width: 100%; max-width: 250px">
+      <h5>{{ prod.title }}</h5>
+      <h5>${{ prod.price }}</h5>
+      <ul class="nav nav-pills nav-fill">
+        <li class="nav-item m-2">
+          <a [routerLink]="['edit/' + prod._id]" class="btn btn-primary active" role="button" aria-pressed="true" style="width: 100%; max-width: 100px">Edit</a>
+        </li>
+        <li class="nav-item m-2">
+          <button (click)="delete(prod._id)" class="btn btn-danger active" role="button" aria-pressed="true" style="width: 100%; max-width: 100px">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

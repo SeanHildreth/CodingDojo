@@ -1,0 +1,38 @@
+<div class="jumbotron text-center py-1 my-3">
+  <h1 class="display-4">Edit Product</h1>
+  <img [src]="product.url" style="width: 100%; max-width: 250px">
+  <form class="form-group" (ngSubmit)="editProduct()">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Title:</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="title" [(ngModel)]="product.title">
+    </div>
+    <div *ngIf="errors">
+      <p *ngIf="errors.title">{{ errors.title.message }}</p>
+    </div>
+    <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Price:</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="price" [(ngModel)]="product.price">
+    </div>
+    <div *ngIf="errors">
+      <p *ngIf="errors.price">{{ errors.price.message }}</p>
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text">Image URL:</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="url" [(ngModel)]="product.url">
+    </div>
+    <ul class="nav nav-pills nav-fill">
+      <li class="nav-item">
+        <input type="submit" class="btn btn-primary active mx-3 mb-2" style="width: 100%; max-width: 100px" value="Update">
+      </li>
+      <li class="nav-item">
+        <button (click)="delete(id)" class="btn btn-danger active mx-3 mb-2" role="button" aria-pressed="true" style="width: 100%; max-width: 100px">Delete</button>
+      </li>
+    </ul>
+  </form>
+</div>
